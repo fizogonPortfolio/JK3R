@@ -82,7 +82,12 @@
             width: min(1100px, 100%);
 
             padding: 40px 20px 35px;
-            background: linear-gradient(180deg, rgba(20, 20, 20, 0.35), transparent);
+
+            background: linear-gradient(
+                180deg,
+                rgba(20, 20, 20, 0.35),
+                transparent
+            );
 
             border-top: 3px solid #a40000;
             border-bottom: 3px solid #a40000;
@@ -194,6 +199,7 @@
 
         .Section {
             width: min(1000px, 95%);
+            
 
             display: flex;
             flex-direction: column;
@@ -204,6 +210,7 @@
 
         .SectionTitle {
             font-family: "Anton", sans-serif;
+            
 
             font-size: clamp(38px, 7vw, 52px);
 
@@ -215,6 +222,7 @@
         }
 
         .SectionTitle span {
+            text-shadow:1.5px 0 white,-1.5px 0 white, 0 1.5px white, 0 -1.5px white, 3px 3px 5px white;
             color: #a90000;
         }
 
@@ -325,6 +333,7 @@
             padding: 11px 22px;
 
             background: #a40000;
+            box-shadow:1.5px 0 white,-1.5px 0 white, 0 1.5px white, 0 -1.5px white, 3px 3px 5px white;
 
             border: none;
 
@@ -344,6 +353,41 @@
             background: #df0000;
 
             transform: scale(1.06);
+        }
+
+        /* SELFIES */
+
+        .SectionSelfies {
+            width: min(1000px, 95%);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+        }
+
+        .Selfies {
+            width: 250px;
+            height: 250px;
+
+            object-fit: cover;
+
+            border-radius: 35px;
+            box-shadow:1.5px 0 white,-1.5px 0 white, 0 1.5px white, 0 -1.5px white, 4px 4px 6px white;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .Selfies:hover {
+            transform: scale(1.03);
+
+            box-shadow:
+                4px 4px 10px rgba(164, 0, 0, 0.6);
         }
 
         /* SOCIALS */
@@ -366,6 +410,7 @@
             background: #111;
 
             border: 2px solid #555;
+            box-shadow:1.5px 0 white,-1.5px 0 white, 0 1.5px white, 0 -1.5px white, 3px 3px 5px white;
 
             color: #fff;
 
@@ -376,8 +421,7 @@
 
             text-decoration: none;
 
-            transition:
-                0.2s ease;
+            transition: 0.2s ease;
         }
 
         .SocialButton:hover {
@@ -386,7 +430,9 @@
             border-color: #a40000;
 
             transform: translateY(-3px);
-            box-shadow: 4px 4px 0 rgba(164, 0, 0, 0.2);
+
+            box-shadow:
+                4px 4px 0 rgba(164, 0, 0, 0.2);
         }
 
         /* QUOTE */
@@ -433,16 +479,28 @@
 
         .Support {
             width: min(850px, 95%);
+
             padding: 28px 25px 30px;
-            background: linear-gradient(135deg, rgba(20, 20, 20, 0.9), rgba(5, 5, 5, 0.8));
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(20, 20, 20, 0.9),
+                    rgba(5, 5, 5, 0.8)
+                );
+
             border: 1px solid #292929;
             border-top: 3px solid #8d0000;
-            box-shadow: 8px 8px 0 rgba(164, 0, 0, 0.12);
+
+            box-shadow:
+                8px 8px 0 rgba(164, 0, 0, 0.12);
         }
 
         .SupportText {
             margin-bottom: 20px;
+
             color: #bdbdbd;
+
             font-size: 16px;
             letter-spacing: 1px;
         }
@@ -451,28 +509,42 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
             gap: 12px;
+
             flex-wrap: wrap;
         }
 
         .SupportButton {
             min-width: 100px;
+
             padding: 13px 24px;
+
             background: #111;
+
             border: 2px solid #555;
+
             color: #fff;
+
             font-family: "Oswald", sans-serif;
+
             font-size: 16px;
             font-weight: 700;
+
             text-decoration: none;
+
             transition: 0.2s ease;
         }
 
         .SupportButton:hover {
             background: #a40000;
+
             border-color: #df0000;
+
             transform: translateY(-3px);
-            box-shadow: 4px 4px 0 rgba(164, 0, 0, 0.25);
+
+            box-shadow:
+                4px 4px 0 rgba(164, 0, 0, 0.25);
         }
 
         /* FOOTER */
@@ -559,6 +631,17 @@
                 flex: 1;
                 padding: 12px 14px;
             }
+
+            .SectionSelfies {
+                gap: 10px;
+            }
+
+            .Selfies {
+                width: 100px;
+                height: 100px;
+
+                border-radius: 20px;
+            }
         }
     </style>
 </head>
@@ -566,69 +649,47 @@
 <body>
 
     <main class="Page">
-
         <header class="Header">
-
             <h1 class="Logo">JK3R</h1>
-
             <p class="Official">
                 Official Website
             </p>
-
         </header>
 
-
         <section class="Intro">
-
             <h2>Jai Wilson</h2>
-
             <p>
                 Musician. Singer. Songwriter. Content Creator.
             </p>
-
             <p>
                 Welcome to the official home of JK3R.
             </p>
-
         </section>
 
-
         <section class="Section">
-
             <h2 class="SectionTitle">
                 About <span>JK3R</span>
             </h2>
-
             <div class="SectionLine"></div>
-
             <p class="AboutText">
                 Jai Wilson, better known as JK3R, is a musician,
                 singer and songwriter from the UK. His music blends
                 rock, emo, goth and rap influences into his own sound.
             </p>
-
             <p class="AboutText">
                 Alongside music, JK3R creates online content and
                 continues to build his own identity as an artist.
             </p>
-
         </section>
 
-
         <section class="Section">
-
             <h2 class="SectionTitle">
                 Top <span>3</span>
             </h2>
-
             <div class="SectionLine"></div>
-
             <div class="Music">
-
                 <div class="MusicItem">
-
                     <div class="MusicInfo">
-
                         <p class="MusicNumber">
                             01
                         </p>
@@ -640,9 +701,7 @@
                         <p class="MusicArtist">
                             JK3R & Rebzyyx
                         </p>
-
                     </div>
-
                     <a
                         class="ListenButton"
                         href="https://open.spotify.com/track/0"
@@ -650,28 +709,21 @@
                         rel="noopener noreferrer">
                         LISTEN
                     </a>
-
                 </div>
 
-
                 <div class="MusicItem">
-
                     <div class="MusicInfo">
-
                         <p class="MusicNumber">
                             02
                         </p>
-
                         <h3 class="MusicName">
                             ILoveZ&lt;3
                         </h3>
-
                         <p class="MusicArtist">
                             JK3R & Rebzyyx
                         </p>
 
                     </div>
-
                     <a
                         class="ListenButton"
                         href="https://open.spotify.com/album/7D4g6DgcrUu1BKRMyCU6tb"
@@ -679,26 +731,19 @@
                         rel="noopener noreferrer">
                         LISTEN
                     </a>
-
                 </div>
 
-
                 <div class="MusicItem">
-
                     <div class="MusicInfo">
-
                         <p class="MusicNumber">
                             03
                         </p>
-
                         <h3 class="MusicName">
                             All I Want Is You
                         </h3>
-
                         <p class="MusicArtist">
                             JK3R & Rebzyyx
                         </p>
-
                     </div>
 
                     <a
@@ -708,24 +753,35 @@
                         rel="noopener noreferrer">
                         LISTEN
                     </a>
-
                 </div>
-
             </div>
-
         </section>
 
 
-        <section class="Section">
+        <section class="SectionSelfies">
+            <img
+                class="Selfies"
+                src="Images/JK3RImage1.jpg"
+                alt="JK3R">
 
+            <img
+                class="Selfies"
+                src="Images/JK3RImage2.jpg"
+                alt="JK3R">
+
+            <img
+                class="Selfies"
+                src="Images/JK3RImage3.jpg"
+                alt="JK3R">
+
+        </section>
+
+        <section class="Section">
             <h2 class="SectionTitle">
                 Find <span>JK3R</span>
             </h2>
-
             <div class="SectionLine"></div>
-
             <div class="Socials">
-
                 <a
                     class="SocialButton"
                     href="https://www.youtube.com/@jk3r_"
@@ -733,7 +789,6 @@
                     rel="noopener noreferrer">
                     YouTube
                 </a>
-
                 <a
                     class="SocialButton"
                     href="https://www.instagram.com/jk3r_was_here/"
@@ -741,7 +796,6 @@
                     rel="noopener noreferrer">
                     Instagram
                 </a>
-
                 <a
                     class="SocialButton"
                     href="https://open.spotify.com/artist/1ecMML3OAT0IoBW6kQtK1o"
@@ -749,7 +803,6 @@
                     rel="noopener noreferrer">
                     Spotify
                 </a>
-
                 <a
                     class="SocialButton"
                     href="https://www.tiktok.com/@jk3r_"
@@ -757,7 +810,6 @@
                     rel="noopener noreferrer">
                     TikTok
                 </a>
-
                 <a
                     class="SocialButton"
                     href="https://jk3r.creator-spring.com"
@@ -765,20 +817,14 @@
                     rel="noopener noreferrer">
                     Merch Store
                 </a>
-
             </div>
-
         </section>
 
-
         <section class="Quote">
-
             <p>
                 MAKE NOISE. MAKE MUSIC.
             </p>
-
         </section>
-
 
         <footer>
             © 2026 JK3R — Jai Wilson |
@@ -786,19 +832,14 @@
         </footer>
 
         <section class="Support">
-
             <p class="SectionTitle">
                 Support <span>The Web</span>
             </p>
-
             <div class="SectionLine"></div>
-
             <p class="SupportText">
                 Support a new web designer — all donations are appreciated!
             </p>
-
             <div class="SupportButtons">
-
                 <a
                     class="SupportButton"
                     href="https://www.paypal.com/paypalme/fizogon/1"
@@ -806,7 +847,6 @@
                     rel="noopener noreferrer">
                     £1
                 </a>
-
                 <a
                     class="SupportButton"
                     href="https://www.paypal.com/paypalme/fizogon/5"
@@ -814,7 +854,6 @@
                     rel="noopener noreferrer">
                     £5
                 </a>
-
                 <a
                     class="SupportButton"
                     href="https://www.paypal.com/paypalme/fizogon/25"
@@ -822,10 +861,8 @@
                     rel="noopener noreferrer">
                     £25
                 </a>
-
             </div>
         </section>
     </main>
 </body>
-
 </html>
