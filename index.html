@@ -41,9 +41,12 @@
 
     body::before {
         content: "";
+
         position: fixed;
         inset: 0;
+
         pointer-events: none;
+
         background:
             radial-gradient(
                 circle at 15% 15%,
@@ -55,8 +58,18 @@
                 rgba(120, 10, 60, 0.18),
                 transparent 32%
             ),
-            url(Images/JK3R_Background.png);
+            linear-gradient(
+                rgba(0, 0, 0, 0.15),
+                rgba(0, 0, 0, 0.15)
+            ),
+            url("Images/JK3R_Background.png");
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
         z-index: -1;
+
         animation: BackgroundPulse 8s ease-in-out infinite alternate;
     }
 
