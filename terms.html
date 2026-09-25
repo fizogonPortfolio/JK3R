@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Terms Of Service — JK3R Official Website</title>
+
+<meta
+    name="description"
+    content="Terms of Service for the official JK3R website and GothRift Recordz.">
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&display=swap');
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        min-height: 100vh;
+        overflow-x: hidden;
+        font-family: "Oswald", sans-serif;
+        color: #f5f5f5;
+        background:
+            linear-gradient(
+                rgba(5, 3, 5, 0.88),
+                rgba(5, 3, 5, 0.98)
+            ),
+            repeating-linear-gradient(
+                0deg,
+                #181217 0px,
+                #181217 2px,
+                #0d0a0d 2px,
+                #0d0a0d 5px
+            );
+    }
+
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background:
+            radial-gradient(
+                circle at 15% 15%,
+                rgba(190, 25, 88, 0.22),
+                transparent 30%
+            ),
+            radial-gradient(
+                circle at 85% 75%,
+                rgba(120, 10, 60, 0.18),
+                transparent 32%
+            ),
+            url("Images/JK3R_Background.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.9;
+        z-index: -1;
+    }
+
+    ::selection {
+        background: #a91d59;
+        color: #fff;
+    }
+
+    .Page {
+        width: min(900px, 100%);
+        min-height: 100vh;
+        margin: auto;
+        padding: 35px 20px 50px;
+    }
+
+    .Header {
+        padding: 35px 20px;
+        margin-bottom: 35px;
+        background:
+            linear-gradient(
+                180deg,
+                rgba(30, 20, 28, 0.55),
+                rgba(0, 0, 0, 0.15)
+            );
+        border-top: 3px solid #b21f63;
+        border-bottom: 3px solid #b21f63;
+        box-shadow:
+            8px 8px 0 rgba(145, 20, 75, 0.18);
+    }
+
+    .Logo {
+        font-family: "Anton", sans-serif;
+        font-size: clamp(55px, 12vw, 100px);
+        line-height: 0.9;
+        letter-spacing: 7px;
+        text-align: center;
+        color: #eeeeee;
+        text-shadow:
+            5px 5px 0 #a91d59,
+            9px 9px 0 #050505;
+    }
+
+    .Subtitle {
+        margin-top: 18px;
+        color: #d43a7d;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 14px;
+    }
+
+    .Content {
+        padding: 35px;
+        background: rgba(5, 5, 5, 0.78);
+        border-left: 6px solid #a91d59;
+        border-right: 2px solid #332b31;
+        box-shadow:
+            8px 8px 0 rgba(140, 15, 70, 0.16);
+        backdrop-filter: blur(6px);
+    }
+
+    .Updated {
+        margin-bottom: 30px;
+        color: #777;
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+
+    h2 {
+        margin-top: 30px;
+        margin-bottom: 12px;
+        font-family: "Anton", sans-serif;
+        font-size: 30px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    h2 span {
+        color: #b21f63;
+    }
+
+    p {
+        margin-bottom: 14px;
+        color: #c8c8c8;
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    ul {
+        margin: 10px 0 18px 25px;
+        color: #c8c8c8;
+    }
+
+    li {
+        margin-bottom: 8px;
+        line-height: 1.6;
+    }
+
+    a {
+        color: #d43a7d;
+        text-decoration: none;
+        font-weight: 700;
+        transition:
+            color 0.25s ease,
+            text-shadow 0.25s ease;
+    }
+
+    a:hover {
+        color: #ff6ba8;
+        text-decoration: underline;
+        text-shadow:
+            0 0 10px rgba(212, 58, 125, 0.35);
+    }
+
+    .BackButton {
+        display: block;
+        width: fit-content;
+        margin: 35px auto 0;
+        padding: 12px 25px;
+        background: #a91d59;
+        border: 2px solid #d43a7d;
+        color: #fff;
+        box-shadow:
+            4px 4px 0 #080808;
+        text-decoration: none;
+        transition:
+            transform 0.25s ease,
+            background 0.25s ease,
+            box-shadow 0.25s ease;
+    }
+
+    .BackButton:hover {
+        background: #d43a7d;
+        transform:
+            translateY(-3px);
+        box-shadow:
+            6px 6px 0 #080808;
+        text-decoration: none;
+    }
+
+    footer {
+        margin-top: 35px;
+        padding: 25px 15px;
+        border-top: 2px solid #38232e;
+        text-align: center;
+        color: #777;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    footer strong {
+        color: #d43a7d;
+    }
+
+    @media (max-width: 600px) {
+
+        .Page {
+            padding: 20px 12px 35px;
+        }
+
+        .Content {
+            padding: 25px 18px;
+        }
+
+        .Logo {
+            letter-spacing: 4px;
+        }
+
+        .Subtitle {
+            letter-spacing: 3px;
+        }
+
+        h2 {
+            font-size: 26px;
+        }
+
+        p,
+        li {
+            font-size: 15px;
+        }
+    }
+</style>
+
+</head>
+
+<body>
+
+<main class="Page">
+
+    <header class="Header">
+
+        <h1 class="Logo">
+            JK3R
+        </h1>
+
+        <p class="Subtitle">
+            Terms Of Service
+        </p>
+
+    </header>
+
+    <section class="Content">
+
+        <p class="Updated">
+            Last Updated: September 2026
+        </p>
+
+        <p>
+            Welcome to the official JK3R website. This website is
+            operated for informational and promotional purposes by
+            GothRift Recordz.
+        </p>
+
+        <p>
+            By accessing or using this website, you agree to the
+            terms described below. If you do not agree with these
+            terms, please do not use the website.
+        </p>
+
+
+        <h2>
+            1. <span>Website Use</span>
+        </h2>
+
+        <p>
+            This website is provided for information about JK3R
+            (Jai Wilson), including music, social media,
+            photographs, merchandise and related content.
+        </p>
+
+        <p>
+            You agree to use this website only for lawful purposes
+            and in a manner that does not interfere with the
+            operation of the website or the experience of other
+            visitors.
+        </p>
+
+
+        <h2>
+            2. <span>Intellectual Property</span>
+        </h2>
+
+        <p>
+            Unless otherwise stated, content displayed on this
+            website may include copyrighted material belonging to
+            JK3R, Jai Wilson, GothRift Recordz or their respective
+            owners.
+        </p>
+
+        <p>
+            This may include, but is not limited to:
+        </p>
+
+        <ul>
+            <li>Photographs and images</li>
+            <li>Music and artwork</li>
+            <li>Logos and branding</li>
+            <li>Website graphics and design</li>
+            <li>Written content</li>
+        </ul>
+
+        <p>
+            You may not reproduce, redistribute, modify or use
+            copyrighted website content for commercial purposes
+            without appropriate permission from the relevant
+            rights holder.
+        </p>
+
+
+        <h2>
+            3. <span>External Links</span>
+        </h2>
+
+        <p>
+            This website may contain links to third-party websites
+            and services, including Spotify, YouTube, Instagram,
+            PayPal and merchandise platforms.
+        </p>
+
+        <p>
+            These websites are operated independently from JK3R
+            and GothRift Recordz. We are not responsible for the
+            content, availability, privacy practices or terms of
+            third-party websites.
+        </p>
+
+
+        <h2>
+            4. <span>Merchandise & Payments</span>
+        </h2>
+
+        <p>
+            Any purchases made through external merchandise or
+            payment platforms are subject to the terms and
+            conditions of those platforms.
+        </p>
+
+        <p>
+            JK3R.com does not directly process or store payment
+            card information through this website.
+        </p>
+
+
+        <h2>
+            5. <span>Donations</span>
+        </h2>
+
+        <p>
+            Any optional donations made through links on this
+            website are voluntary.
+        </p>
+
+        <p>
+            Donations are processed through third-party payment
+            services such as PayPal. Their own terms and policies
+            apply to transactions made through their services.
+        </p>
+
+
+        <h2>
+            6. <span>Cookies</span>
+        </h2>
+
+        <p>
+            This website may use a small amount of browser
+            storage to remember whether you have accepted the
+            website's cookie notice.
+        </p>
+
+        <p>
+            The website currently uses local browser storage for
+            this preference. This information is stored on your
+            device and is not used to identify you personally.
+        </p>
+
+
+        <h2>
+            7. <span>Privacy</span>
+        </h2>
+
+        <p>
+            We respect your privacy. This website does not
+            intentionally request sensitive personal information
+            from visitors.
+        </p>
+
+        <p>
+            If you contact us using an email address displayed on
+            this website, information included in your message may
+            be received and used for the purpose of responding to
+            your enquiry.
+        </p>
+
+
+        <h2>
+            8. <span>Website Availability</span>
+        </h2>
+
+        <p>
+            We aim to keep the website available and functioning,
+            but we do not guarantee that the website will always
+            be available, uninterrupted or free from errors.
+        </p>
+
+        <p>
+            Features, content, links and website design may be
+            changed, updated or removed without prior notice.
+        </p>
+
+
+        <h2>
+            9. <span>Limitation of Liability</span>
+        </h2>
+
+        <p>
+            To the extent permitted by applicable law, GothRift
+            Recordz and the website operators are not responsible
+            for losses or damages resulting from the use of this
+            website or from third-party websites linked from it.
+        </p>
+
+
+        <h2>
+            10. <span>Changes to These Terms</span>
+        </h2>
+
+        <p>
+            These Terms of Service may be updated from time to
+            time. Changes will be posted on this page with an
+            updated revision date.
+        </p>
+
+        <p>
+            Your continued use of the website after changes are
+            posted constitutes acceptance of the updated terms.
+        </p>
+
+
+        <h2>
+            11. <span>Contact</span>
+        </h2>
+
+        <p>
+            If you have questions regarding these Terms of
+            Service, you can contact:
+        </p>
+
+        <p>
+            <strong>
+                GothRift Recordz
+            </strong>
+            <br>
+            <a href="mailto:gothriftrecordz@gmail.com">
+                gothriftrecordz@gmail.com
+            </a>
+        </p>
+
+        <p>
+            Website designed by Fizogon:
+            <br>
+            <a href="mailto:fizogonbusiness@gmail.com">
+                fizogonbusiness@gmail.com
+            </a>
+        </p>
+
+
+        <a class="BackButton" href="index.html">
+            ← Back To JK3R
+        </a>
+
+    </section>
+
+    <footer>
+        © 2026 GothRift Recordz
+        <br>
+        Designed By Fizogon
+        <br>
+        <strong>JK3R Official Website</strong>
+    </footer>
+
+</main>
+
+</body>
+
+</html>
