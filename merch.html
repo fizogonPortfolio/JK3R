@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>JK3R Merch — Official Store</title>
+
+<meta name="description" content="Official JK3R merchandise. Shop official JK3R hoodies, shirts, hats, posters, bags and more.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        min-height: 100vh;
+        background: #080608;
+        color: white;
+        font-family: "Oswald", sans-serif;
+    }
+
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background:
+            linear-gradient(rgba(8, 6, 8, .78), rgba(8, 6, 8, .92)),
+            url("Images/JK3R_Background.png") center/cover no-repeat;
+        z-index: -2;
+        pointer-events: none;
+    }
+
+    body::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background:
+            radial-gradient(circle at 20% 10%, rgba(255, 0, 120, .12), transparent 30%),
+            radial-gradient(circle at 80% 70%, rgba(130, 0, 255, .10), transparent 35%);
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .Page {
+        width: min(1250px, calc(100% - 30px));
+        margin: auto;
+    }
+
+    .Header {
+        min-height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(255, 255, 255, .13);
+    }
+
+    .Logo {
+        font-family: "Anton", sans-serif;
+        font-size: clamp(45px, 8vw, 80px);
+        letter-spacing: 3px;
+        line-height: 1;
+    }
+
+    .BackButton {
+        padding: 13px 22px;
+        border: 1px solid rgba(255, 0, 120, .7);
+        background: rgba(15, 8, 15, .85);
+        color: white;
+        font-family: "Oswald", sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        transition: .2s;
+    }
+
+    .BackButton:hover {
+        background: #ff0078;
+        border-color: #ff0078;
+        transform: translateY(-2px);
+    }
+
+    .Hero {
+        text-align: center;
+        padding: 75px 15px 55px;
+    }
+
+    .Hero h1 {
+        margin: 0;
+        font-family: "Anton", sans-serif;
+        font-size: clamp(48px, 9vw, 100px);
+        letter-spacing: 3px;
+        text-shadow: 5px 5px 0 rgba(255, 0, 120, .22);
+    }
+
+    .Hero p {
+        max-width: 650px;
+        margin: 18px auto 0;
+        color: #c7c2c7;
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    .StoreBar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 30px;
+        padding: 18px 20px;
+        background: rgba(12, 8, 12, .85);
+        border: 1px solid rgba(255, 255, 255, .12);
+    }
+
+    .StoreBar strong {
+        font-family: "Anton", sans-serif;
+        font-size: 25px;
+        letter-spacing: 1px;
+    }
+
+    .StoreBar span {
+        color: #a9a2aa;
+        font-size: 14px;
+    }
+
+    .Products {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+        padding-bottom: 80px;
+    }
+
+    .Product {
+        position: relative;
+        overflow: hidden;
+        background: rgba(12, 9, 13, .92);
+        border: 1px solid rgba(255, 255, 255, .12);
+        transition: .25s;
+    }
+
+    .Product:hover {
+        transform: translateY(-5px);
+        border-color: rgba(255, 0, 120, .65);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, .35);
+    }
+
+    .ProductImage {
+        height: 330px;
+        background:
+            linear-gradient(135deg, rgba(255, 0, 120, .08), rgba(0, 0, 0, .4)),
+            #151015;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .ProductImage img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: .3s;
+    }
+
+    .Product:hover .ProductImage img {
+        transform: scale(1.04);
+    }
+
+    .NoImage {
+        padding: 30px;
+        text-align: center;
+        font-family: "Anton", sans-serif;
+        font-size: 30px;
+        letter-spacing: 2px;
+        color: rgba(255, 255, 255, .25);
+    }
+
+    .ProductInfo {
+        padding: 22px;
+    }
+
+    .ProductName {
+        margin: 0;
+        font-family: "Anton", sans-serif;
+        font-size: 25px;
+        line-height: 1.15;
+        letter-spacing: 1px;
+    }
+
+    .ProductType {
+        margin: 8px 0 14px;
+        color: #a9a2aa;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .Price {
+        color: #ff4b9d;
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 17px;
+    }
+
+    .BuyButton {
+        display: block;
+        width: 100%;
+        padding: 14px;
+        border: 1px solid #ff0078;
+        background: #ff0078;
+        color: white;
+        font-family: "Oswald", sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-align: center;
+        cursor: pointer;
+        transition: .2s;
+    }
+
+    .BuyButton:hover {
+        background: transparent;
+        color: #ff4b9d;
+    }
+
+    .Notice {
+        max-width: 900px;
+        margin: 0 auto 70px;
+        padding: 22px;
+        border-left: 3px solid #ff0078;
+        background: rgba(15, 9, 15, .85);
+        color: #bdb7bd;
+        line-height: 1.6;
+        font-size: 14px;
+    }
+
+    .Notice strong {
+        color: white;
+    }
+
+    footer {
+        padding: 35px 15px;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, .12);
+        color: #8f898f;
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    @media (max-width: 850px) {
+        .Products {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .Page {
+            width: min(100% - 20px, 1250px);
+        }
+
+        .Header {
+            min-height: 90px;
+        }
+
+        .BackButton {
+            padding: 10px 14px;
+            font-size: 13px;
+        }
+
+        .Hero {
+            padding: 55px 5px 40px;
+        }
+
+        .Hero p {
+            font-size: 16px;
+        }
+
+        .StoreBar {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        .Products {
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+
+        .ProductImage {
+            height: 300px;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        * {
+            scroll-behavior: auto !important;
+            transition: none !important;
+        }
+    }
+</style>
+
+</head>
+
+<body>
+
+<div class="Page">
+
+<header class="Header">
+    <div class="Logo">JK3R</div>
+
+    <a class="BackButton" href="index.html">
+        ← BACK TO SITE
+    </a>
+</header>
+
+<section class="Hero">
+    <h1>OFFICIAL MERCH</h1>
+
+    <p>
+        Official JK3R apparel, accessories and artwork.
+        Choose your item below and purchase it through the official JK3R merch store.
+    </p>
+</section>
+
+<div class="StoreBar">
+    <div>
+        <strong>THE JK3R COLLECTION</strong><br>
+        <span>Official designs from JK3R</span>
+    </div>
+
+    <span>Official Spring products</span>
+</div>
+
+<main class="Products" id="Products"></main>
+
+<div class="Notice">
+    <strong>ORDER INFORMATION</strong><br>
+    Merchandise is fulfilled through the official JK3R Spring store.
+    Product availability, sizes, colours, delivery options and payment are handled securely by Spring during checkout.
+
+    Prices May Change Based On Several Factors.
+</div>
+
+<footer>
+    © 2026 GothRift Recordz (gothriftrecordz@gmail.com)<br>
+    Designed By Fizogon (fizogonbusiness@gmail.com)
+</footer>
+
+</div>
+
+<script>
+    const Products = [
+        {
+            name: "Misanthropy - Pastel Pink",
+            type: "Hoodie [Multiple Styles]",
+            price: "£46.01",
+            image: "Images/Merch/Misanthropy-PastelPink.jpg",
+            link: "https://jk3r.creator-spring.com/listing/misanthropy-pastel-pink?product=377&variation=100069"
+        },
+
+        {
+            name: "I Luv Yu JK3R",
+            type: "Backpack",
+            price: "£43.57",
+            image: "Images/Merch/ILuvYuBackpack.jpg",
+            link: "https://jk3r.creator-spring.com/listing/i-luv-yu-jk3r-backpack?product=2686&variation=107744"
+        },
+
+        {
+            name: "Misanthropy - Red Beanie",
+            type: "Beanie [Multiple Styles]",
+            price: "£23.96",
+            image: "Images/Merch/Mis-RedBeanie.jpg",
+            link: "https://jk3r.creator-spring.com/listing/misanthropy-red-beanie?product=2360&variation=106683"
+        },
+
+        {
+            name: "Misanthropy Classic",
+            type: "Hoodie [Multiple Styles]",
+            price: "£44.36",
+            image: "Images/Merch/MisanthropyClassic.jpg",
+            link: "https://jk3r.creator-spring.com/listing/misanthropy-classic?product=2180&variation=106098"
+        },
+
+        {
+            name: "Misanthropy Inverted",
+            type: "Hoodie [Multiple Styles]",
+            price: "£44.36",
+            image: "Images/Merch/MisanthropyInverted.jpg",
+            link: "https://jk3r.creator-spring.com/listing/misanthropy-inverted?product=2180&variation=106099"
+        },
+
+        {
+            name: "Misanthropy Inverted Blue",
+            type: "Hoodie [Multiple Styles]",
+            price: "£44.36",
+            image: "Images/Merch/invertedblue.jpg",
+            link: "https://jk3r.creator-spring.com/listing/misanthropy-inverted-blue?product=2180&variation=106098"
+        },
+
+        {
+            name: "Misanthropy Inverted Green",
+            type: "Hoodie [Multiple Styles]",
+            price: "£44.36",
+            image: "Images/Merch/InvertedGreen.jpg",
+            link: "https://jk3r.creator-spring.com/listing/misanthropy-inverted-green?product=2180&variation=106099"
+        },
+
+        {
+            name: "MISFITS - JK3R x The Kid LAROI",
+            type: "Cap",
+            price: "£20.70",
+            image: "Images/Merch/JK3R_Cap1.jpg",
+            link: "https://jk3r.creator-spring.com/listing/new-misfits-jk3r-x-the-kid-l?product=2148&variation=105971"
+        },
+
+        {
+            name: "MISFITS - JK3R x The Kid LAROI",
+            type: "Cap",
+            price: "£18.00",
+            image: "Images/Merch/JK3R_Cap2.jpg",
+            link: "https://jk3r.creator-spring.com/listing/misfits-jk3r-x-the-kid-laroi?product=2150&variation=105986"
+        },
+
+        {
+            name: "LEGACY17xJK3R LIMITED AUTOGRAPHED POSTER",
+            type: "Poster",
+            price: "£12.54",
+            image: "Images/Merch/Poster1JK3R.jpg",
+            link: "https://jk3r.creator-spring.com/listing/500legacy?product=623&variation=102506"
+        },
+
+        {
+            name: "JK3R x Legacy17: New Beginning (VOL.1)",
+            type: "T-Shirt [Multiple Styles]",
+            price: "£28.50",
+            image: "Images/Merch/JK3RVol1.jpg",
+            link: "https://jk3r.creator-spring.com/listing/LEGACY17VOL1?product=387&variation=101810"
+        },
+
+        {
+            name: "JK3R x Legacy17: New Beginning (VOL.1)",
+            type: "Slides [Multiple Styles]",
+            price: "£32.16",
+            image: "Images/Merch/JK3RSlides.jpg",
+            link: "https://jk3r.creator-spring.com/listing/LEGACY17VOL1?product=1896&variation=105384"
+        },
+
+        {
+            name: "JK3R x Legacy17: New Beginning (VOL.1)",
+            type: "T-Shirt [Multiple Styles]",
+            price: "£40.20",
+            image: "Images/Merch/TShirtJK3R.jpg",
+            link: "https://jk3r.creator-spring.com/listing/LEGACY17VOL1?product=2256&variation=106465"
+        },
+
+        {
+            name: "JK3R x Legacy17: New Beginning (VOL.1)",
+            type: "Bag",
+            price: "£26.80",
+            image: "Images/Merch/JK3RBag.jpg",
+            link: "https://jk3r.creator-spring.com/listing/LEGACY17VOL1?product=526&variation=101936"
+        },
+
+    ];
+
+    const ProductContainer = document.getElementById("Products");
+
+    Products.forEach(Product => {
+        ProductContainer.innerHTML += `
+            <article class="Product">
+                <div class="ProductImage">
+                    <img
+                        src="${Product.image}"
+                        alt="${Product.name}"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                    >
+
+                    <div class="NoImage" style="display:none;">
+                        NO IMAGE
+                    </div>
+                </div>
+
+                <div class="ProductInfo">
+                    <h2 class="ProductName">${Product.name}</h2>
+
+                    <div class="ProductType">
+                        ${Product.type}
+                    </div>
+
+                    <div class="Price">
+                        ${Product.price}
+                    </div>
+
+                    <a
+                        class="BuyButton"
+                        href="${Product.link}"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        BUY NOW
+                    </a>
+                </div>
+            </article>
+        `;
+    });
+</script>
+
+</body>
+</html>
