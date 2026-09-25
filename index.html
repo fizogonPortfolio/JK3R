@@ -661,6 +661,27 @@
             0 0 24px rgba(212, 58, 125, 0.25);
     }
 
+    .ImageFullscreen {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        background: rgba(0, 0, 0, 0.92);
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+        cursor: pointer;
+    }
+
+    .ImageFullscreen img {
+        max-width: 95vw;
+        max-height: 95vh;
+        object-fit: contain;
+        border-radius: 20px;
+        box-shadow: 0 0 40px rgba(212, 58, 125, 0.25);
+        cursor: default;
+    }
+
     .Selfies:nth-child(2):hover {
         transform:
             translateY(-10px)
@@ -1268,17 +1289,21 @@
     <section class="SectionSelfies">
         <img
             class="Selfies"
+            id = "full"
             src="Images/JK3RImage1.jpg"
+            onclick= "OpenImage(this)"
             alt="JK3R Jai Wilson">
 
         <img
             class="Selfies"
             src="Images/JK3RImage2.jpg"
+            onclick= "OpenImage(this)"
             alt="JK3R Jai Wilson">
 
         <img
             class="Selfies"
             src="Images/JK3RImage3.jpg"
+            onclick= "OpenImage(this)"
             alt="JK3R Jai Wilson">
     </section>
 
@@ -1394,6 +1419,8 @@
 
 </main>
 
+
+
 <script>
     const NathanTitle = document.getElementById("NathanTitle");
 
@@ -1404,6 +1431,16 @@
     NathanTitle.addEventListener("mouseleave", function () {
         NathanTitle.innerHTML = `Who's <span>Nathan</span>?`;
     });
+
+    function OpenImage(image) {
+        document.getElementById("FullscreenImage").src = image.src;
+        document.getElementById("ImageFullscreen").style.display = "flex";
+    }
+
+    function CloseImage() {
+        document.getElementById("ImageFullscreen").style.display = "none";
+        document.getElementById("FullscreenImage").src = "";
+    }
 </script>
 </body>
 </html>
