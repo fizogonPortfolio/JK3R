@@ -8,6 +8,8 @@
 
 <title>JK3R (Jai Wilson) — Official Website</title>
 
+<link rel="icon" type="image/png" href="Images/JK3RImage3.jpg">
+
 <meta name="description" content="JK3R (Jai Wilson) official website. Discover JK3R's music, songs, social media, merch, photos and latest releases.">
 <meta name="author" content="JK3R">
 <meta name="robots" content="index, follow">
@@ -819,7 +821,7 @@
         justify-content: center;
         align-items: center;
         gap: 15px;
-        flex-wrap: wrap;
+        flex-wrap: column;
     }
 
     .Selfies {
@@ -1608,6 +1610,13 @@
 
 </section>
 
+<section class="Section" style="display: none;">
+    <h2 class="SectionTitle">
+        New Merch <span>Out Now</span>
+    </h2>
+    <div class="SectionLine"></div>
+</section>
+
 <section class="MerchCTA">
 
 <a
@@ -2004,6 +2013,7 @@
 <p>
     This website uses a cookie to remember your cookie
     preference. No tracking or advertising cookies are used.
+    Ignoring Cookies Will Result In Cookie Popup Showing Again.
     <a href="terms.html">
         Terms Of Service
     </a>
@@ -2013,8 +2023,14 @@
 
 <button
     class="CookieButton"
-    onclick="AcceptCookies()">
+    onclick="AcceptCookies(true)">
     Accept Cookies
+</button>
+
+<button
+    class="CookieButton"
+    onclick="AcceptCookies(false)">
+    Ignore Cookies
 </button>
 
 </div>
@@ -2040,10 +2056,12 @@
         document.body.style.overflow = "";
     }
 
-    function AcceptCookies() {
-        document.cookie =
+    function AcceptCookies(Ignore) {
+        if (!Ignore) {
+            document.cookie =
             CookieName +
             "=accepted; Max-Age=31536000; Path=/; SameSite=Lax; Secure";
+        }
 
         CookiePopup.style.display = "none";
     }
