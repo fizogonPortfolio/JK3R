@@ -1,21 +1,15 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-adsense-account" content="ca-pub-7272462336635844">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-adsense-account" content="ca-pub-7272462336635844">
 
 <title>JK3R (Jai Wilson) — Official Website</title>
-     
-
 <link rel="icon" type="image/png" href="Images/JK3RImage3.jpg">
-
 <meta name="description" content="JK3R (Jai Wilson) official website. Discover JK3R's music, songs, social media, merch, photos and latest releases.">
 <meta name="author" content="JK3R">
 <meta name="robots" content="index, follow">
-
 <link rel="canonical" href="https://jk3r.com/">
 
 <meta property="og:type" content="website">
@@ -56,2030 +50,1648 @@
 </script>
 
 <style>
-
-    @import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&display=swap');
-
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        color: #f5f5f5;
-        text-align: center;
-    }
-
-    html {
-        scroll-behavior: smooth;
-    }
-
-    body {
-        min-height: 100vh;
-        overflow-x: hidden;
-        font-family: "Oswald", sans-serif;
-        background:
-            linear-gradient(
-                rgba(5, 3, 5, 0.86),
-                rgba(5, 3, 5, 0.98)
-            ),
-            repeating-linear-gradient(
-                0deg,
-                #181217 0px,
-                #181217 2px,
-                #0d0a0d 2px,
-                #0d0a0d 5px
-            );
-    }
-
-    body::before {
-        content: "";
-        position: fixed;
-        inset: 0;
-        pointer-events: none;
-        background:
-            radial-gradient(
-                circle at 15% 15%,
-                rgba(190, 25, 88, 0.22),
-                transparent 30%
-            ),
-            radial-gradient(
-                circle at 85% 75%,
-                rgba(120, 10, 60, 0.18),
-                transparent 32%
-            ),
-            url("Images/JK3R_Background.png");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        opacity: 0.9;
-        z-index: -1;
-        animation: BackgroundPulse 8s ease-in-out infinite alternate;
-    }
-
-    ::selection {
-        background: #a91d59;
-        color: #fff;
-    }
-
-    a,
-    button {
-        -webkit-tap-highlight-color: transparent;
-    }
-
-    .Page {
-        width: 100%;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 30px 20px 0;
-        gap: 55px;
-        position: relative;
-    }
-
-    .Header {
-        width: min(1100px, 100%);
-        padding: 40px 20px 35px;
-        background:
-            linear-gradient(
-                180deg,
-                rgba(30, 20, 28, 0.48),
-                rgba(0, 0, 0, 0.08)
-            );
-        border-top: 3px solid #b21f63;
-        border-bottom: 3px solid #b21f63;
-        position: relative;
-        overflow: hidden;
-        transform: rotate(-0.4deg);
-        box-shadow:
-            10px 10px 0 rgba(145, 20, 75, 0.18);
-        animation:
-            HeaderEnter 0.9s cubic-bezier(.16, 1, .3, 1) both;
-        backdrop-filter: blur(6px);
-    }
-
-    .Header::before,
-    .Header::after {
-        content: "";
-        position: absolute;
-        width: 70px;
-        height: 4px;
-        background: #c52a70;
-        transition:
-            width 0.4s ease,
-            box-shadow 0.4s ease;
-    }
-
-    .Header::before {
-        left: 0;
-        top: -9px;
-    }
-
-    .Header::after {
-        right: 0;
-        bottom: -9px;
-    }
-
-    .Header:hover::before,
-    .Header:hover::after {
-        width: 170px;
-        box-shadow:
-            0 0 15px rgba(197, 42, 112, 0.55);
-    }
-
-    .Logo {
-        font-family: "Anton", sans-serif;
-        font-size: clamp(75px, 16vw, 160px);
-        line-height: 0.8;
-        letter-spacing: 8px;
-        color: #eeeeee;
-        text-shadow:
-            5px 5px 0 #a91d59,
-            10px 10px 0 #050505;
-        transition:
-            transform 0.4s cubic-bezier(.16, 1, .3, 1),
-            letter-spacing 0.4s ease,
-            text-shadow 0.4s ease;
-    }
-
-    .Header:hover .Logo {
-        transform:
-            skew(-2deg)
-            scale(1.025);
-        letter-spacing: 11px;
-        text-shadow:
-            7px 7px 0 #c52a70,
-            13px 13px 0 #050505;
-    }
-
-    .Official {
-        margin-top: 22px;
-        font-size: 17px;
-        letter-spacing: 9px;
-        text-transform: uppercase;
-        color: #d43a7d;
-        opacity: 0;
-        animation:
-            FadeUp 0.7s 0.35s ease forwards;
-    }
-
-    .Intro {
-        width: min(850px, 95%);
-        padding: 35px 25px;
-        background: rgba(5, 5, 5, 0.72);
-        border-left: 6px solid #a91d59;
-        border-right: 2px solid #332b31;
-        box-shadow:
-            8px 8px 0 rgba(140, 15, 70, 0.16);
-        position: relative;
-        overflow: hidden;
-        backdrop-filter: blur(6px);
-        animation:
-            IntroEnter 0.8s 0.2s cubic-bezier(.16, 1, .3, 1) both;
-    }
-
-    .Intro::before {
-        content: "";
-        position: absolute;
-        width: 75px;
-        height: 3px;
-        left: 25px;
-        top: 0;
-        background: #b21f63;
-        transition:
-            width 0.4s ease,
-            box-shadow 0.4s ease;
-    }
-
-    .Intro:hover::before {
-        width: 180px;
-        box-shadow:
-            0 0 14px rgba(178, 31, 99, 0.6);
-    }
-
-    .Intro::after {
-        content: "";
-        position: absolute;
-        width: 180px;
-        height: 150%;
-        left: -240px;
-        top: -25%;
-        background:
-            linear-gradient(
-                90deg,
-                transparent,
-                rgba(255, 255, 255, 0.055),
-                transparent
-            );
-        transform: skewX(-20deg);
-        animation:
-            IntroShine 6s 2s ease-in-out infinite;
-    }
-
-    .Intro h2 {
-        font-family: "Anton", sans-serif;
-        font-size: clamp(38px, 7vw, 58px);
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        margin-bottom: 18px;
-        transition:
-            transform 0.35s ease,
-            letter-spacing 0.35s ease;
-    }
-
-    .Intro:hover h2 {
-        transform: scale(1.025);
-        letter-spacing: 5px;
-    }
-
-    .Intro h2::after {
-        content: "";
-        display: block;
-        width: 110px;
-        height: 4px;
-        margin: 15px auto 0;
-        background: #b21f63;
-        transition:
-            width 0.4s ease,
-            box-shadow 0.4s ease;
-    }
-
-    .Intro:hover h2::after {
-        width: 155px;
-        box-shadow:
-            0 0 10px rgba(178, 31, 99, 0.5);
-    }
-
-    .Intro p {
-        margin: 8px auto;
-        color: #c8c8c8;
-        font-size: 18px;
-        line-height: 1.5;
-        transition:
-            color 0.3s ease,
-            transform 0.3s ease;
-    }
-
-    .Intro:hover p {
-        color: #eeeeee;
-        transform: translateY(-1px);
-    }
-
-    .MerchCTA {
-        width: min(850px, 95%);
-        display: flex;
-        justify-content: center;
-        animation:
-            MerchEnter 0.9s 0.45s cubic-bezier(.16, 1, .3, 1) both;
-    }
-
-    .MerchButton {
-        width: min(620px, 100%);
-        min-height: 105px;
-        padding: 20px 35px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 24px;
-        position: relative;
-        overflow: hidden;
-        background:
-            linear-gradient(
-                135deg,
-                #d43a7d,
-                #a91d59 55%,
-                #74123e
-            );
-        border: 2px solid #ed4c8c;
-        box-shadow:
-            8px 8px 0 #080808,
-            0 0 30px rgba(212, 58, 125, 0.28);
-        text-decoration: none;
-        transition:
-            transform 0.35s cubic-bezier(.16, 1, .3, 1),
-            box-shadow 0.35s ease,
-            border-color 0.3s ease;
-    }
-
-    .MerchButton::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background:
-            linear-gradient(
-                115deg,
-                transparent 20%,
-                rgba(255, 255, 255, 0.18) 45%,
-                transparent 65%
-            );
-        transform: translateX(-120%);
-        transition:
-            transform 0.65s cubic-bezier(.16, 1, .3, 1);
-    }
-
-    .MerchButton::after {
-        content: "";
-        position: absolute;
-        inset: 5px;
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        pointer-events: none;
-    }
-
-    .MerchButton:hover::before {
-        transform: translateX(120%);
-    }
-
-    .MerchButton:hover {
-        transform:
-            translateY(-7px)
-            scale(1.025);
-        border-color: #ff79ac;
-        box-shadow:
-            10px 12px 0 #080808,
-            0 0 45px rgba(212, 58, 125, 0.52);
-    }
-
-    .MerchButton:active {
-        transform:
-            translateY(1px)
-            scale(0.98);
-    }
-
-    .MerchButtonText {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        position: relative;
-        z-index: 1;
-    }
-
-    .MerchSmall {
-        color: rgba(255, 255, 255, 0.72);
-        font-family: "Oswald", sans-serif;
-        font-size: 13px;
-        font-weight: 600;
-        letter-spacing: 4px;
-        line-height: 1;
-        margin-bottom: 8px;
-    }
-
-    .MerchMain {
-        color: #fff;
-        font-family: "Anton", sans-serif;
-        font-size: clamp(30px, 6vw, 48px);
-        letter-spacing: 2px;
-        line-height: 0.95;
-        text-shadow:
-            3px 3px 0 rgba(0, 0, 0, 0.3);
-    }
-
-    .MerchArrow {
-        position: relative;
-        z-index: 1;
-        font-family: "Oswald", sans-serif;
-        font-size: 45px;
-        line-height: 1;
-        transition:
-            transform 0.35s cubic-bezier(.16, 1, .3, 1);
-    }
-
-    .MerchButton:hover .MerchArrow {
-        transform: translateX(10px);
-    }
-
-    .Section {
-        width: min(1000px, 95%);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        animation:
-            FadeUp 0.8s ease both;
-    }
-
-    .SectionTitle {
-        font-family: "Anton", sans-serif;
-        font-size: clamp(38px, 7vw, 52px);
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        transform: rotate(-1deg);
-        transition:
-            transform 0.35s cubic-bezier(.16, 1, .3, 1),
-            letter-spacing 0.35s ease;
-    }
-
-    .Section:hover .SectionTitle {
-        transform:
-            rotate(0deg)
-            scale(1.025);
-        letter-spacing: 5px;
-    }
-
-    .SectionTitle span {
-        color: #b21f63;
-        text-shadow:
-            3px 3px 0 #080808;
-        transition:
-            color 0.3s ease,
-            text-shadow 0.3s ease;
-    }
-
-    .Section:hover .SectionTitle span {
-        color: #d43a7d;
-        text-shadow:
-            3px 3px 0 #080808,
-            0 0 13px rgba(212, 58, 125, 0.35);
-    }
-
-    .SectionLine {
-        width: 70px;
-        height: 4px;
-        background: #a91d59;
-        transition:
-            width 0.4s cubic-bezier(.16, 1, .3, 1),
-            box-shadow 0.4s ease;
-    }
-
-    .Section:hover .SectionLine {
-        width: 120px;
-        box-shadow:
-            0 0 12px rgba(169, 29, 89, 0.5);
-    }
-
-    .AboutText {
-        width: min(720px, 100%);
-        color: #c8c8c8;
-        font-size: 18px;
-        line-height: 1.65;
-        transition:
-            color 0.3s ease,
-            transform 0.3s ease;
-    }
-
-    .Section:hover .AboutText {
-        color: #e3e3e3;
-    }
-
-    .Music {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-    }
-
-    .MusicItem {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 20px 24px;
-        background:
-            linear-gradient(
-                90deg,
-                rgba(145, 20, 75, 0.12),
-                rgba(0, 0, 0, 0.72)
-            );
-        border: 1px solid #292329;
-        border-left: 7px solid #771440;
-        position: relative;
-        overflow: hidden;
-        box-shadow:
-            5px 5px 0 rgba(0, 0, 0, 0.35);
-        transition:
-            transform 0.35s cubic-bezier(.16, 1, .3, 1),
-            border-color 0.3s ease,
-            background 0.3s ease,
-            box-shadow 0.35s ease;
-    }
-
-    .MusicItem::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background:
-            linear-gradient(
-                90deg,
-                transparent,
-                rgba(255, 255, 255, 0.045),
-                transparent
-            );
-        transform: translateX(-110%);
-        transition:
-            transform 0.55s cubic-bezier(.16, 1, .3, 1);
-    }
-
-    .MusicItem:hover::before {
-        transform: translateX(110%);
-    }
-
-    .MusicItem:hover {
-        transform:
-            translateX(8px)
-            translateY(-2px);
-        border-left-color: #d43a7d;
-        background:
-            linear-gradient(
-                90deg,
-                rgba(169, 29, 89, 0.18),
-                rgba(20, 20, 20, 0.85)
-            );
-        box-shadow:
-            8px 8px 0 rgba(0, 0, 0, 0.4),
-            0 0 18px rgba(169, 29, 89, 0.13);
-    }
-
-    .MusicInfo {
-        text-align: left;
-    }
-
-    .MusicNumber {
-        color: #c52a70;
-        font-size: 14px;
-        font-weight: 700;
-        letter-spacing: 2px;
-        transition:
-            color 0.3s ease,
-            letter-spacing 0.3s ease;
-    }
-
-    .MusicItem:hover .MusicNumber {
-        color: #ed4c8c;
-        letter-spacing: 4px;
-    }
-
-    .MusicName {
-        margin-top: 3px;
-        font-family: "Anton", sans-serif;
-        font-size: 28px;
-        letter-spacing: 1px;
-        text-align: left;
-        transition:
-            transform 0.3s ease,
-            letter-spacing 0.3s ease;
-    }
-
-    .MusicItem:hover .MusicName {
-        transform: translateX(3px);
-        letter-spacing: 1.5px;
-    }
-
-    .MusicArtist {
-        margin-top: 3px;
-        color: #888;
-        font-size: 14px;
-        letter-spacing: 1px;
-        text-align: left;
-        transition:
-            color 0.3s ease;
-    }
-
-    .MusicItem:hover .MusicArtist {
-        color: #aaa;
-    }
-
-    .ListenButton {
-        padding: 11px 22px;
-        background: #9e1b57;
-        border: none;
-        box-shadow:
-            4px 4px 0 #080808;
-        font-family: "Oswald", sans-serif;
-        font-size: 15px;
-        font-weight: 700;
-        text-decoration: none;
-        cursor: pointer;
-        position: relative;
-        overflow: hidden;
-        transition:
-            background 0.3s ease,
-            transform 0.3s cubic-bezier(.16, 1, .3, 1),
-            box-shadow 0.3s ease;
-    }
-
-    .ListenButton::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: rgba(255, 255, 255, 0.1);
-        transform: translateX(-110%) skewX(-20deg);
-        transition:
-            transform 0.45s cubic-bezier(.16, 1, .3, 1);
-    }
-
-    .ListenButton:hover::before {
-        transform: translateX(110%) skewX(-20deg);
-    }
-
-    .ListenButton:hover {
-        background: #d43a7d;
-        transform:
-            translateY(-4px)
-            scale(1.04);
-        box-shadow:
-            6px 6px 0 #080808,
-            0 0 16px rgba(212, 58, 125, 0.3);
-    }
-
-    .ListenButton:active {
-        transform:
-            translateY(1px)
-            scale(0.97);
-    }
-
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    color: #f5f5f5;
+    text-align: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: "Oswald", sans-serif;
+    background:
+        linear-gradient(rgba(5,3,5,.86),rgba(5,3,5,.98)),
+        repeating-linear-gradient(0deg,#181217 0px,#181217 2px,#0d0a0d 2px,#0d0a0d 5px);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 15% 15%,rgba(190,25,88,.22),transparent 30%),
+        radial-gradient(circle at 85% 75%,rgba(120,10,60,.18),transparent 32%),
+        url("Images/JK3R_Background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: .9;
+    z-index: -1;
+    animation: BackgroundPulse 8s ease-in-out infinite alternate;
+}
+
+::selection {
+    background: #a91d59;
+    color: #fff;
+}
+
+a, button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.Page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px 0;
+    gap: 55px;
+    position: relative;
+}
+
+.Header {
+    width: min(1100px,100%);
+    padding: 40px 20px 35px;
+    background: linear-gradient(180deg,rgba(30,20,28,.48),rgba(0,0,0,.08));
+    border-top: 3px solid #b21f63;
+    border-bottom: 3px solid #b21f63;
+    position: relative;
+    overflow: hidden;
+    transform: rotate(-.4deg);
+    box-shadow: 10px 10px 0 rgba(145,20,75,.18);
+    animation: HeaderEnter .9s cubic-bezier(.16,1,.3,1) both;
+    backdrop-filter: blur(6px);
+}
+
+.Header::before,
+.Header::after {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 4px;
+    background: #c52a70;
+    transition: width .4s ease,box-shadow .4s ease;
+}
+
+.Header::before {
+    left: 0;
+    top: -9px;
+}
+
+.Header::after {
+    right: 0;
+    bottom: -9px;
+}
+
+.Header:hover::before,
+.Header:hover::after {
+    width: 170px;
+    box-shadow: 0 0 15px rgba(197,42,112,.55);
+}
+
+.Logo {
+    font-family: "Anton",sans-serif;
+    font-size: clamp(75px,16vw,160px);
+    line-height: .8;
+    letter-spacing: 8px;
+    color: #eee;
+    text-shadow: 5px 5px 0 #a91d59,10px 10px 0 #050505;
+    transition: transform .4s cubic-bezier(.16,1,.3,1),letter-spacing .4s ease,text-shadow .4s ease;
+}
+
+.Header:hover .Logo {
+    transform: skew(-2deg) scale(1.025);
+    letter-spacing: 11px;
+    text-shadow: 7px 7px 0 #c52a70,13px 13px 0 #050505;
+}
+
+.Official {
+    margin-top: 22px;
+    font-size: 17px;
+    letter-spacing: 9px;
+    text-transform: uppercase;
+    color: #d43a7d;
+    opacity: 0;
+    animation: FadeUp .7s .35s ease forwards;
+}
+
+.Intro {
+    width: min(850px,95%);
+    padding: 35px 25px;
+    background: rgba(5,5,5,.72);
+    border-left: 6px solid #a91d59;
+    border-right: 2px solid #332b31;
+    box-shadow: 8px 8px 0 rgba(140,15,70,.16);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(6px);
+    animation: IntroEnter .8s .2s cubic-bezier(.16,1,.3,1) both;
+}
+
+.Intro::before {
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 3px;
+    left: 25px;
+    top: 0;
+    background: #b21f63;
+    transition: width .4s ease,box-shadow .4s ease;
+}
+
+.Intro:hover::before {
+    width: 180px;
+    box-shadow: 0 0 14px rgba(178,31,99,.6);
+}
+
+.Intro::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 150%;
+    left: -240px;
+    top: -25%;
+    background: linear-gradient(90deg,transparent,rgba(255,255,255,.055),transparent);
+    transform: skewX(-20deg);
+    animation: IntroShine 6s 2s ease-in-out infinite;
+}
+
+.Intro h2 {
+    font-family: "Anton",sans-serif;
+    font-size: clamp(38px,7vw,58px);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    transition: transform .35s ease,letter-spacing .35s ease;
+}
+
+.Intro:hover h2 {
+    transform: scale(1.025);
+    letter-spacing: 5px;
+}
+
+.Intro h2::after {
+    content: "";
+    display: block;
+    width: 110px;
+    height: 4px;
+    margin: 15px auto 0;
+    background: #b21f63;
+    transition: width .4s ease,box-shadow .4s ease;
+}
+
+.Intro:hover h2::after {
+    width: 155px;
+    box-shadow: 0 0 10px rgba(178,31,99,.5);
+}
+
+.Intro p {
+    margin: 8px auto;
+    color: #c8c8c8;
+    font-size: 18px;
+    line-height: 1.5;
+    transition: color .3s ease,transform .3s ease;
+}
+
+.Intro:hover p {
+    color: #eee;
+    transform: translateY(-1px);
+}
+
+.MerchCTA {
+    width: min(850px,95%);
+    display: flex;
+    justify-content: center;
+    animation: MerchEnter .9s .45s cubic-bezier(.16,1,.3,1) both;
+}
+
+.MerchButton {
+    width: min(620px,100%);
+    min-height: 105px;
+    padding: 20px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg,#d43a7d,#a91d59 55%,#74123e);
+    border: 2px solid #ed4c8c;
+    box-shadow: 8px 8px 0 #080808,0 0 30px rgba(212,58,125,.28);
+    text-decoration: none;
+    transition: transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s ease,border-color .3s ease;
+}
+
+.MerchButton::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(115deg,transparent 20%,rgba(255,255,255,.18) 45%,transparent 65%);
+    transform: translateX(-120%);
+    transition: transform .65s cubic-bezier(.16,1,.3,1);
+}
+
+.MerchButton::after {
+    content: "";
+    position: absolute;
+    inset: 5px;
+    border: 1px solid rgba(255,255,255,.18);
+    pointer-events: none;
+}
+
+.MerchButton:hover::before {
+    transform: translateX(120%);
+}
+
+.MerchButton:hover {
+    transform: translateY(-7px) scale(1.025);
+    border-color: #ff79ac;
+    box-shadow: 10px 12px 0 #080808,0 0 45px rgba(212,58,125,.52);
+}
+
+.MerchButton:active {
+    transform: translateY(1px) scale(.98);
+}
+
+.MerchButtonText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 1;
+}
+
+.MerchSmall {
+    color: rgba(255,255,255,.72);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.MerchMain {
+    color: #fff;
+    font-family: "Anton",sans-serif;
+    font-size: clamp(30px,6vw,48px);
+    letter-spacing: 2px;
+    line-height: .95;
+    text-shadow: 3px 3px 0 rgba(0,0,0,.3);
+}
+
+.MerchArrow {
+    position: relative;
+    z-index: 1;
+    font-size: 45px;
+    line-height: 1;
+    transition: transform .35s cubic-bezier(.16,1,.3,1);
+}
+
+.MerchButton:hover .MerchArrow {
+    transform: translateX(10px);
+}
+
+.Section {
+    width: min(1000px,95%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    animation: FadeUp .8s ease both;
+}
+
+.SectionTitle {
+    font-family: "Anton",sans-serif;
+    font-size: clamp(38px,7vw,52px);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transform: rotate(-1deg);
+    transition: transform .35s cubic-bezier(.16,1,.3,1),letter-spacing .35s ease;
+}
+
+.Section:hover .SectionTitle {
+    transform: rotate(0deg) scale(1.025);
+    letter-spacing: 5px;
+}
+
+.SectionTitle span {
+    color: #b21f63;
+    text-shadow: 3px 3px 0 #080808;
+    transition: color .3s ease,text-shadow .3s ease;
+}
+
+.Section:hover .SectionTitle span {
+    color: #d43a7d;
+    text-shadow: 3px 3px 0 #080808,0 0 13px rgba(212,58,125,.35);
+}
+
+.SectionLine {
+    width: 70px;
+    height: 4px;
+    background: #a91d59;
+    transition: width .4s cubic-bezier(.16,1,.3,1),box-shadow .4s ease;
+}
+
+.Section:hover .SectionLine {
+    width: 120px;
+    box-shadow: 0 0 12px rgba(169,29,89,.5);
+}
+
+.AboutText {
+    width: min(720px,100%);
+    color: #c8c8c8;
+    font-size: 18px;
+    line-height: 1.65;
+    transition: color .3s ease,transform .3s ease;
+}
+
+.Section:hover .AboutText {
+    color: #e3e3e3;
+}
+
+.Music {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.MusicItem {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    background: linear-gradient(90deg,rgba(145,20,75,.12),rgba(0,0,0,.72));
+    border: 1px solid #292329;
+    border-left: 7px solid #771440;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 0 rgba(0,0,0,.35);
+    transition: transform .35s cubic-bezier(.16,1,.3,1),border-color .3s ease,background .3s ease,box-shadow .35s ease;
+}
+
+.MusicItem::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,transparent,rgba(255,255,255,.045),transparent);
+    transform: translateX(-110%);
+    transition: transform .55s cubic-bezier(.16,1,.3,1);
+}
+
+.MusicItem:hover::before {
+    transform: translateX(110%);
+}
+
+.MusicItem:hover {
+    transform: translateX(8px) translateY(-2px);
+    border-left-color: #d43a7d;
+    background: linear-gradient(90deg,rgba(169,29,89,.18),rgba(20,20,20,.85));
+    box-shadow: 8px 8px 0 rgba(0,0,0,.4),0 0 18px rgba(169,29,89,.13);
+}
+
+.MusicInfo {
+    text-align: left;
+}
+
+.MusicNumber {
+    color: #c52a70;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: color .3s ease,letter-spacing .3s ease;
+}
+
+.MusicItem:hover .MusicNumber {
+    color: #ed4c8c;
+    letter-spacing: 4px;
+}
+
+.MusicName {
+    margin-top: 3px;
+    font-family: "Anton",sans-serif;
+    font-size: 28px;
+    letter-spacing: 1px;
+    text-align: left;
+    transition: transform .3s ease,letter-spacing .3s ease;
+}
+
+.MusicItem:hover .MusicName {
+    transform: translateX(3px);
+    letter-spacing: 1.5px;
+}
+
+.MusicArtist {
+    margin-top: 3px;
+    color: #888;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-align: left;
+    transition: color .3s ease;
+}
+
+.MusicItem:hover .MusicArtist {
+    color: #aaa;
+}
+
+.ListenButton {
+    display: inline-block;
+    padding: 11px 22px;
+    background: #9e1b57;
+    border: none;
+    box-shadow: 4px 4px 0 #080808;
+    font-family: "Oswald",sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background .3s ease,transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s ease;
+}
+
+.ListenButton::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,.1);
+    transform: translateX(-110%) skewX(-20deg);
+    transition: transform .45s cubic-bezier(.16,1,.3,1);
+}
+
+.ListenButton:hover::before {
+    transform: translateX(110%) skewX(-20deg);
+}
+
+.ListenButton:hover {
+    background: #d43a7d;
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 6px 6px 0 #080808,0 0 16px rgba(212,58,125,.3);
+}
+
+.ListenButton:active {
+    transform: translateY(1px) scale(.97);
+}
+
+.ComingSoon {
+    width: 100%;
+    padding: 18px;
+    display: grid;
+    grid-template-columns: 270px 1fr;
+    align-items: stretch;
+    gap: 28px;
+    background: linear-gradient(135deg,rgba(30,16,27,.96),rgba(5,5,5,.94));
+    border: 1px solid #3a2632;
+    border-left: 7px solid #a91d59;
+    box-shadow: 8px 8px 0 rgba(0,0,0,.45),0 0 35px rgba(169,29,89,.12);
+    position: relative;
+    overflow: hidden;
+    transition: transform .4s cubic-bezier(.16,1,.3,1),border-color .3s ease,box-shadow .4s ease;
+}
+
+.ComingSoon::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(115deg,transparent 20%,rgba(255,255,255,.045) 45%,transparent 65%);
+    transform: translateX(-120%);
+    transition: transform .7s cubic-bezier(.16,1,.3,1);
+}
+
+.ComingSoon:hover::before {
+    transform: translateX(120%);
+}
+
+.ComingSoon:hover {
+    transform: translateY(-6px) scale(1.01);
+    border-color: #d43a7d;
+    box-shadow: 10px 12px 0 rgba(0,0,0,.5),0 0 40px rgba(169,29,89,.22);
+}
+
+.AlbumCover {
+    width: 270px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    display: block;
+    border: 2px solid #4a2938;
+    box-shadow: 6px 6px 0 #080808,0 0 25px rgba(169,29,89,.18);
+    position: relative;
+    z-index: 1;
+    transition: transform .45s cubic-bezier(.16,1,.3,1),border-color .3s ease,box-shadow .4s ease;
+}
+
+.ComingSoon:hover .AlbumCover {
+    transform: scale(1.035) rotate(-1deg);
+    border-color: #d43a7d;
+    box-shadow: 8px 8px 0 #080808,0 0 35px rgba(212,58,125,.3);
+}
+
+.ComingSoonInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    z-index: 1;
+    padding: 15px 10px 15px 0;
+}
+
+.ComingSoonLabel {
+    color: #d43a7d;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.ComingSoonTitle {
+    font-family: "Anton",sans-serif;
+    font-size: clamp(34px,5vw,55px);
+    line-height: .98;
+    letter-spacing: 2px;
+    text-align: left;
+    text-shadow: 4px 4px 0 #080808;
+    margin-bottom: 12px;
+}
+
+.ComingSoonArtist {
+    color: #999;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-align: left;
+    margin-bottom: 18px;
+}
+
+.ComingSoonText {
+    max-width: 500px;
+    color: #bdbdbd;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+    margin-bottom: 24px;
+}
+
+.ComingSoon .ListenButton {
+    display: inline-block;
+}
+
+.SectionSelfies {
+    width: min(500px,95%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: column;
+}
+
+.Selfies {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 35px;
+    border: 2px solid #38232e;
+    box-shadow: 3px 3px 0 #080808;
+    filter: saturate(.9) contrast(1.05);
+    cursor: pointer;
+    transition: transform .45s cubic-bezier(.16,1,.3,1),box-shadow .45s ease,border-color .35s ease,filter .35s ease;
+}
+
+.Selfies:nth-child(1) { animation: ImageEnter .8s .1s cubic-bezier(.16,1,.3,1) both; }
+.Selfies:nth-child(2) { animation: ImageEnter .8s .25s cubic-bezier(.16,1,.3,1) both; }
+.Selfies:nth-child(3) { animation: ImageEnter .8s .4s cubic-bezier(.16,1,.3,1) both; }
+
+.Selfies:hover {
+    transform: translateY(-10px) scale(1.045) rotate(-1.5deg);
+    border-color: #d43a7d;
+    filter: saturate(1.15) contrast(1.08);
+    box-shadow: 6px 6px 0 #8f1745,0 0 24px rgba(212,58,125,.25);
+}
+
+.Selfies:nth-child(2):hover {
+    transform: translateY(-10px) scale(1.045) rotate(1.5deg);
+}
+
+.ImageFullscreen {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+    background: rgba(0,0,0,.92);
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    cursor: pointer;
+}
+
+.ImageFullscreen img {
+    max-width: 95vw;
+    max-height: 95vh;
+    object-fit: contain;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(212,58,125,.25);
+    cursor: default;
+}
+
+.Socials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.SocialButton {
+    min-width: 145px;
+    padding: 14px 22px;
+    background: #111;
+    border: 2px solid #4a3a42;
+    box-shadow: 4px 4px 0 #241a20;
+    color: #fff;
+    font-family: "Oswald",sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: transform .3s cubic-bezier(.16,1,.3,1),background .3s ease,border-color .3s ease,box-shadow .3s ease;
+}
+
+.SocialButton::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,.08);
+    transform: translateX(-110%) skewX(-20deg);
+    transition: transform .45s cubic-bezier(.16,1,.3,1);
+}
+
+.SocialButton:hover::before {
+    transform: translateX(110%) skewX(-20deg);
+}
+
+.SocialButton:hover {
+    background: #a91d59;
+    border-color: #d43a7d;
+    transform: translateY(-5px) rotate(-1deg);
+    box-shadow: 6px 6px 0 #080808,0 0 16px rgba(212,58,125,.22);
+}
+
+.SocialButton:active {
+    transform: translateY(1px) scale(.97);
+}
+
+.Quote {
+    width: min(800px,95%);
+    padding: 40px 20px;
+    border-top: 1px solid #33232b;
+    border-bottom: 1px solid #33232b;
+    position: relative;
+    animation: QuoteEnter .9s ease both;
+}
+
+.Quote::before {
+    content: "“";
+    position: absolute;
+    left: 10px;
+    top: -15px;
+    font-family: "Anton",sans-serif;
+    font-size: 70px;
+    color: #b21f63;
+    transition: transform .35s ease,color .35s ease;
+}
+
+.Quote:hover::before {
+    transform: translateY(-5px) rotate(-5deg);
+    color: #d43a7d;
+}
+
+.Quote p {
+    font-family: "Anton",sans-serif;
+    font-size: clamp(25px,5vw,42px);
+    letter-spacing: 2px;
+    color: #dedede;
+    transform: rotate(-1deg);
+    transition: transform .35s ease,letter-spacing .35s ease,color .35s ease;
+}
+
+.Quote:hover p {
+    transform: rotate(0deg) scale(1.025);
+    letter-spacing: 4px;
+    color: #fff;
+}
+
+.Support {
+    width: min(850px,95%);
+    padding: 28px 25px 30px;
+    background: linear-gradient(135deg,rgba(25,18,23,.92),rgba(5,5,5,.84));
+    border: 1px solid #30242b;
+    border-top: 3px solid #b21f63;
+    box-shadow: 8px 8px 0 rgba(169,29,89,.12);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(6px);
+    animation: IntroEnter .8s ease both;
+}
+
+.Support::before {
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 3px;
+    left: 25px;
+    top: 0;
+    background: #c52a70;
+    transition: width .4s ease,box-shadow .4s ease;
+}
+
+.Support:hover::before {
+    width: 180px;
+    box-shadow: 0 0 14px rgba(197,42,112,.55);
+}
+
+.SupportText {
+    margin-bottom: 20px;
+    color: #bdbdbd;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: color .3s ease;
+}
+
+.Support:hover .SupportText {
+    color: #eee;
+}
+
+.SupportButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.SupportButton {
+    min-width: 100px;
+    padding: 13px 24px;
+    background: #111;
+    border: 2px solid #4a3a42;
+    color: #fff;
+    font-family: "Oswald",sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 4px 4px 0 #241a20;
+    transition: transform .3s cubic-bezier(.16,1,.3,1),background .3s ease,border-color .3s ease,box-shadow .3s ease;
+}
+
+.SupportButton:hover {
+    background: #a91d59;
+    border-color: #d43a7d;
+    transform: translateY(-5px) rotate(1deg);
+    box-shadow: 6px 6px 0 #71143b,0 0 15px rgba(212,58,125,.22);
+}
+
+.SupportButton:nth-child(2):hover {
+    transform: translateY(-7px) rotate(-1deg) scale(1.04);
+}
+
+.SupportButton:active {
+    transform: translateY(1px) scale(.97);
+}
+
+footer {
+    position: relative;
+    z-index: 99999;
+    width: 100vw;
+    margin-top: 10px;
+    padding: 30px 20px;
+    background: #080808;
+    border-top: 2px solid #38232e;
+    color: #888;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    opacity: .85;
+    transition: opacity .3s ease,border-color .3s ease;
+}
+
+footer:hover {
+    opacity: 1;
+    border-color: #a91d59;
+}
+
+.FooterLine {
+    color: #888;
+}
+
+.FooterLine strong {
+    color: #d43a7d;
+}
+
+.FooterLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.FooterLinks a {
+    color: #d43a7d;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color .25s ease,text-shadow .25s ease;
+}
+
+.FooterLinks a:hover {
+    color: #ff6ba8;
+    text-shadow: 0 0 10px rgba(212,58,125,.4);
+    text-decoration: underline;
+}
+
+.CookiePopup {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    width: 380px;
+    max-width: calc(100vw - 40px);
+    padding: 22px;
+    background: linear-gradient(135deg,rgba(20,14,18,.98),rgba(5,5,5,.98));
+    border: 2px solid #38232e;
+    border-left: 5px solid #b21f63;
+    box-shadow: 6px 6px 0 #080808,0 0 25px rgba(169,29,89,.18);
+    z-index: 100000;
+    text-align: left;
+    animation: CookieEnter .5s cubic-bezier(.16,1,.3,1) both;
+}
+
+.CookiePopup h3 {
+    font-family: "Anton",sans-serif;
+    font-size: 26px;
+    letter-spacing: 2px;
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+.CookiePopup p {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+    margin-bottom: 16px;
+}
+
+.CookiePopup a {
+    color: #d43a7d;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.CookiePopup a:hover {
+    text-decoration: underline;
+}
+
+.CookieButtons {
+    display: flex;
+    gap: 10px;
+}
+
+.CookieButton {
+    padding: 10px 18px;
+    background: #a91d59;
+    border: 2px solid #d43a7d;
+    color: #fff;
+    font-family: "Oswald",sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 #080808;
+    transition: transform .25s ease,background .25s ease,box-shadow .25s ease;
+}
+
+.CookieButton:hover {
+    background: #d43a7d;
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 0 #080808;
+}
+
+.CookieButton:active {
+    transform: translateY(1px);
+}
+
+@keyframes HeaderEnter {
+    from { opacity: 0; transform: translateY(-45px) rotate(-3deg); }
+    to { opacity: 1; transform: translateY(0) rotate(-.4deg); }
+}
+
+@keyframes IntroEnter {
+    from { opacity: 0; transform: translateY(35px) scale(.97); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes MerchEnter {
+    from { opacity: 0; transform: translateY(30px) scale(.92); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes FadeUp {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ImageEnter {
+    from { opacity: 0; transform: translateY(35px) scale(.88) rotate(4deg); }
+    to { opacity: 1; transform: translateY(0) scale(1) rotate(0); }
+}
+
+@keyframes QuoteEnter {
+    from { opacity: 0; transform: translateX(-35px) rotate(-2deg); }
+    to { opacity: 1; transform: translateX(0) rotate(0); }
+}
+
+@keyframes IntroShine {
+    0% { left: -240px; }
+    25%,100% { left: 115%; }
+}
+
+@keyframes BackgroundPulse {
+    from { opacity: .85; transform: scale(1); }
+    to { opacity: .95; transform: scale(1.08); }
+}
+
+@keyframes CookieEnter {
+    from { opacity: 0; transform: translateY(30px) scale(.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Navigation, album library and photo gallery */
+
+.MainNav {
+    width: min(1100px,100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 13px 18px;
+    background: rgba(7,6,7,.86);
+    border: 1px solid #3b2932;
+    border-top: 3px solid #a91d59;
+    box-shadow: 5px 5px 0 rgba(0,0,0,.4);
+    backdrop-filter: blur(8px);
+}
+
+.MainNavBrand {
+    font-family: "Anton",sans-serif;
+    font-size: 26px;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.MainNavBrand span {
+    color: #d43a7d;
+}
+
+.MainNavLinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7px;
+}
+
+.MainNavLinks a {
+    padding: 8px 12px;
+    color: #d1c5cc;
+    border: 1px solid transparent;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    transition: .25s ease;
+}
+
+.MainNavLinks a:hover {
+    color: #fff;
+    background: rgba(169,29,89,.18);
+    border-color: #79304e;
+}
+
+.AboutLink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+    padding: 11px 20px;
+    background: #101010;
+    border: 2px solid #a91d59;
+    box-shadow: 4px 4px 0 #080808;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: .25s ease;
+}
+
+.AboutLink:hover {
+    background: #a91d59;
+    transform: translateY(-3px);
+}
+
+/* Album covers stay compact instead of stretching across the card. */
+
+.AlbumLibrary {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 16px;
+}
+
+.AlbumCard {
+    min-width: 0;
+    display: grid;
+    grid-template-columns: 112px minmax(0,1fr);
+    align-items: center;
+    gap: 14px;
+    padding: 12px;
+    overflow: hidden;
+    text-align: left;
+    background: linear-gradient(135deg,rgba(30,16,27,.96),rgba(5,5,5,.94));
+    border: 1px solid #3a2632;
+    border-bottom: 4px solid #a91d59;
+    box-shadow: 6px 6px 0 rgba(0,0,0,.4);
+    transition: transform .3s ease,border-color .3s ease;
+}
+
+.AlbumCard:hover {
+    transform: translateY(-5px);
+    border-color: #d43a7d;
+}
+
+.AlbumCard img {
+    width: 112px;
+    height: 112px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    display: block;
+    border: 1px solid #3a2632;
+    border-radius: 4px;
+}
+
+.AlbumCardInfo {
+    min-width: 0;
+    padding: 4px 0;
+    text-align: left;
+}
+
+.AlbumCardInfo h3 {
+    font-family: "Anton",sans-serif;
+    font-size: 21px;
+    letter-spacing: 1px;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+.AlbumCardInfo p {
+    color: #aaa;
+    margin: 5px 0 12px;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.AlbumCardInfo .ListenButton {
+    display: inline-block;
+}
+
+.GalleryGrid {
+    width: min(850px,100%);
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    gap: 14px;
+}
+
+.GalleryItem {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 2px solid #38232e;
+    box-shadow: 4px 4px 0 #080808;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.GalleryItem:hover {
+    transform: translateY(-5px) scale(1.025);
+    border-color: #d43a7d;
+    box-shadow: 6px 6px 0 #8f1745;
+}
+
+@media (max-width: 700px) {
     .ComingSoon {
-        width: 100%;
-        padding: 18px;
-        display: grid;
-        grid-template-columns: 270px 1fr;
-        align-items: stretch;
-        gap: 28px;
-        background:
-            linear-gradient(
-                135deg,
-                rgba(30, 16, 27, 0.96),
-                rgba(5, 5, 5, 0.94)
-            );
-        border: 1px solid #3a2632;
-        border-left: 7px solid #a91d59;
-        box-shadow:
-            8px 8px 0 rgba(0, 0, 0, 0.45),
-            0 0 35px rgba(169, 29, 89, 0.12);
-        position: relative;
-        overflow: hidden;
-        transition:
-            transform 0.4s cubic-bezier(.16, 1, .3, 1),
-            border-color 0.3s ease,
-            box-shadow 0.4s ease;
-    }
-
-    .ComingSoon::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background:
-            linear-gradient(
-                115deg,
-                transparent 20%,
-                rgba(255, 255, 255, 0.045) 45%,
-                transparent 65%
-            );
-        transform: translateX(-120%);
-        transition:
-            transform 0.7s cubic-bezier(.16, 1, .3, 1);
-    }
-
-    .ComingSoon:hover::before {
-        transform: translateX(120%);
-    }
-
-    .ComingSoon:hover {
-        transform:
-            translateY(-6px)
-            scale(1.01);
-        border-color: #d43a7d;
-        box-shadow:
-            10px 12px 0 rgba(0, 0, 0, 0.5),
-            0 0 40px rgba(169, 29, 89, 0.22);
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding: 15px;
     }
 
     .AlbumCover {
-        width: 270px;
-        aspect-ratio: 1;
-        object-fit: cover;
-        display: block;
-        border: 2px solid #4a2938;
-        box-shadow:
-            6px 6px 0 #080808,
-            0 0 25px rgba(169, 29, 89, 0.18);
-        position: relative;
-        z-index: 1;
-        transition:
-            transform 0.45s cubic-bezier(.16, 1, .3, 1),
-            border-color 0.3s ease,
-            box-shadow 0.4s ease;
-    }
-
-    .ComingSoon:hover .AlbumCover {
-        transform:
-            scale(1.035)
-            rotate(-1deg);
-        border-color: #d43a7d;
-        box-shadow:
-            8px 8px 0 #080808,
-            0 0 35px rgba(212, 58, 125, 0.3);
+        width: min(100%,320px);
+        margin: 0 auto;
     }
 
     .ComingSoonInfo {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        position: relative;
-        z-index: 1;
-        padding: 15px 10px 15px 0;
+        align-items: center;
+        padding: 5px 10px 15px;
     }
 
-    .ComingSoonLabel {
-        color: #d43a7d;
-        font-size: 14px;
-        font-weight: 700;
-        letter-spacing: 4px;
-        text-align: left;
-        margin-bottom: 10px;
-    }
-
-    .ComingSoonTitle {
-        font-family: "Anton", sans-serif;
-        font-size: clamp(34px, 5vw, 55px);
-        line-height: 0.98;
-        letter-spacing: 2px;
-        text-align: left;
-        text-shadow:
-            4px 4px 0 #080808;
-        margin-bottom: 12px;
-    }
-
-    .ComingSoonArtist {
-        color: #999;
-        font-size: 16px;
-        letter-spacing: 2px;
-        text-align: left;
-        margin-bottom: 18px;
-    }
-
+    .ComingSoonLabel,
+    .ComingSoonTitle,
+    .ComingSoonArtist,
     .ComingSoonText {
-        max-width: 500px;
-        color: #bdbdbd;
-        font-size: 16px;
-        line-height: 1.5;
-        text-align: left;
-        margin-bottom: 24px;
+        text-align: center;
     }
 
     .ComingSoon .ListenButton {
-        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .Page {
+        padding: 20px 12px 0;
+        gap: 45px;
     }
 
-    .SectionSelfies {
-        width: min(500px, 95%);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .Header {
+        padding: 30px 10px;
+    }
+
+    .Logo {
+        letter-spacing: 3px;
+    }
+
+    .Header:hover .Logo {
+        transform: none;
+        letter-spacing: 4px;
+    }
+
+    .Official {
+        font-size: 13px;
+        letter-spacing: 4px;
+    }
+
+    .Intro {
+        padding: 28px 18px;
+    }
+
+    .Intro::before,
+    .Support::before {
+        left: 18px;
+    }
+
+    .Intro p,
+    .AboutText {
+        font-size: 16px;
+    }
+
+    .MerchButton {
+        min-height: 90px;
+        padding: 18px 20px;
         gap: 15px;
-        flex-wrap: column;
     }
 
-    .Selfies {
-        width: 250px;
-        height: 250px;
-        object-fit: cover;
-        border-radius: 35px;
-        border: 2px solid #38232e;
-        box-shadow:
-            3px 3px 0 #080808;
-        filter:
-            saturate(0.9)
-            contrast(1.05);
-        cursor: pointer;
-        transition:
-            transform 0.45s cubic-bezier(.16, 1, .3, 1),
-            box-shadow 0.45s ease,
-            border-color 0.35s ease,
-            filter 0.35s ease;
+    .MerchSmall {
+        font-size: 10px;
+        letter-spacing: 2.5px;
     }
 
-    .Selfies:nth-child(1) {
-        animation:
-            ImageEnter 0.8s 0.1s cubic-bezier(.16, 1, .3, 1) both;
+    .MerchMain {
+        font-size: 31px;
+        letter-spacing: 1px;
     }
 
-    .Selfies:nth-child(2) {
-        animation:
-            ImageEnter 0.8s 0.25s cubic-bezier(.16, 1, .3, 1) both;
+    .MerchArrow {
+        font-size: 35px;
     }
 
-    .Selfies:nth-child(3) {
-        animation:
-            ImageEnter 0.8s 0.4s cubic-bezier(.16, 1, .3, 1) both;
+    .MusicItem {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
     }
 
-    .Selfies:hover {
-        transform:
-            translateY(-10px)
-            scale(1.045)
-            rotate(-1.5deg);
-        border-color: #d43a7d;
-        filter:
-            saturate(1.15)
-            contrast(1.08);
-        box-shadow:
-            6px 6px 0 #8f1745,
-            0 0 24px rgba(212, 58, 125, 0.25);
+    .MusicInfo,
+    .MusicName,
+    .MusicArtist {
+        text-align: center;
     }
 
-    .Selfies:nth-child(2):hover {
-        transform:
-            translateY(-10px)
-            scale(1.045)
-            rotate(1.5deg);
-    }
-
-    .ImageFullscreen {
-        display: none;
-        position: fixed;
-        inset: 0;
-        z-index: 9998;
-        background: rgba(0, 0, 0, 0.92);
-        align-items: center;
-        justify-content: center;
-        padding: 30px;
-        cursor: pointer;
-    }
-
-    .ImageFullscreen img {
-        max-width: 95vw;
-        max-height: 95vh;
-        object-fit: contain;
-        border-radius: 20px;
-        box-shadow: 0 0 40px rgba(212, 58, 125, 0.25);
-        cursor: default;
-    }
-
-    .Socials {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
+    .ListenButton {
         width: 100%;
     }
 
     .SocialButton {
-        min-width: 145px;
-        padding: 14px 22px;
-        background: #111;
-        border: 2px solid #4a3a42;
-        box-shadow:
-            4px 4px 0 #241a20;
-        color: #fff;
-        font-family: "Oswald", sans-serif;
-        font-size: 16px;
-        font-weight: 700;
-        text-decoration: none;
-        position: relative;
-        overflow: hidden;
-        transition:
-            transform 0.3s cubic-bezier(.16, 1, .3, 1),
-            background 0.3s ease,
-            border-color 0.3s ease,
-            box-shadow 0.3s ease;
-    }
-
-    .SocialButton::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background:
-            rgba(255, 255, 255, 0.08);
-        transform:
-            translateX(-110%)
-            skewX(-20deg);
-        transition:
-            transform 0.45s cubic-bezier(.16, 1, .3, 1);
-    }
-
-    .SocialButton:hover::before {
-        transform:
-            translateX(110%)
-            skewX(-20deg);
-    }
-
-    .SocialButton:hover {
-        background: #a91d59;
-        border-color: #d43a7d;
-        transform:
-            translateY(-5px)
-            rotate(-1deg);
-        box-shadow:
-            6px 6px 0 #080808,
-            0 0 16px rgba(212, 58, 125, 0.22);
-    }
-
-    .SocialButton:active {
-        transform:
-            translateY(1px)
-            scale(0.97);
-    }
-
-    .Quote {
-        width: min(800px, 95%);
-        padding: 40px 20px;
-        border-top: 1px solid #33232b;
-        border-bottom: 1px solid #33232b;
-        position: relative;
-        animation:
-            QuoteEnter 0.9s ease both;
-    }
-
-    .Quote::before {
-        content: "“";
-        position: absolute;
-        left: 10px;
-        top: -15px;
-        font-family: "Anton", sans-serif;
-        font-size: 70px;
-        color: #b21f63;
-        transition:
-            transform 0.35s ease,
-            color 0.35s ease;
-    }
-
-    .Quote:hover::before {
-        transform:
-            translateY(-5px)
-            rotate(-5deg);
-        color: #d43a7d;
-    }
-
-    .Quote p {
-        font-family: "Anton", sans-serif;
-        font-size: clamp(25px, 5vw, 42px);
-        letter-spacing: 2px;
-        color: #dedede;
-        transform: rotate(-1deg);
-        transition:
-            transform 0.35s ease,
-            letter-spacing 0.35s ease,
-            color 0.35s ease;
-    }
-
-    .Quote:hover p {
-        transform:
-            rotate(0deg)
-            scale(1.025);
-        letter-spacing: 4px;
-        color: #fff;
+        width: 100%;
     }
 
     .Support {
-        width: min(850px, 95%);
-        padding: 28px 25px 30px;
-        background:
-            linear-gradient(
-                135deg,
-                rgba(25, 18, 23, 0.92),
-                rgba(5, 5, 5, 0.84)
-            );
-        border: 1px solid #30242b;
-        border-top: 3px solid #b21f63;
-        box-shadow:
-            8px 8px 0 rgba(169, 29, 89, 0.12);
-        position: relative;
-        overflow: hidden;
-        backdrop-filter: blur(6px);
-        animation:
-            IntroEnter 0.8s ease both;
-    }
-
-    .Support::before {
-        content: "";
-        position: absolute;
-        width: 75px;
-        height: 3px;
-        left: 25px;
-        top: 0;
-        background: #c52a70;
-        transition:
-            width 0.4s ease,
-            box-shadow 0.4s ease;
-    }
-
-    .Support:hover::before {
-        width: 180px;
-        box-shadow:
-            0 0 14px rgba(197, 42, 112, 0.55);
-    }
-
-    .SupportText {
-        margin-bottom: 20px;
-        color: #bdbdbd;
-        font-size: 16px;
-        letter-spacing: 1px;
-        transition:
-            color 0.3s ease;
-    }
-
-    .Support:hover .SupportText {
-        color: #eeeeee;
+        padding: 24px 16px;
     }
 
     .SupportButtons {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 12px;
-        flex-wrap: wrap;
+        gap: 8px;
     }
 
     .SupportButton {
-        min-width: 100px;
-        padding: 13px 24px;
-        background: #111;
-        border: 2px solid #4a3a42;
-        color: #fff;
-        font-family: "Oswald", sans-serif;
-        font-size: 16px;
-        font-weight: 700;
-        text-decoration: none;
-        box-shadow:
-            4px 4px 0 #241a20;
-        transition:
-            transform 0.3s cubic-bezier(.16, 1, .3, 1),
-            background 0.3s ease,
-            border-color 0.3s ease,
-            box-shadow 0.3s ease;
+        min-width: 80px;
+        flex: 1;
+        padding: 12px 14px;
     }
 
-    .SupportButton:hover {
-        background: #a91d59;
-        border-color: #d43a7d;
-        transform:
-            translateY(-5px)
-            rotate(1deg);
-        box-shadow:
-            6px 6px 0 #71143b,
-            0 0 15px rgba(212, 58, 125, 0.22);
-    }
-
-    .SupportButton:nth-child(2):hover {
-        transform:
-            translateY(-7px)
-            rotate(-1deg)
-            scale(1.04);
-    }
-
-    .SupportButton:active {
-        transform:
-            translateY(1px)
-            scale(0.97);
-    }
-
-    footer {
-        position: relative;
-        z-index: 99999;
-        width: 100vw;
-        margin-top: 10px;
-        padding: 30px 20px;
-        background: #080808;
-        border-top: 2px solid #38232e;
-        color: #888;
-        font-size: 14px;
-        letter-spacing: 1px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-        opacity: 0.85;
-        transition:
-            opacity 0.3s ease,
-            border-color 0.3s ease;
-    }
-
-    footer:hover {
-        opacity: 1;
-        border-color: #a91d59;
-    }
-
-    .FooterLine {
-        color: #888;
-    }
-
-    .FooterLine strong {
-        color: #d43a7d;
-    }
-
-    .FooterLinks {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .SectionSelfies {
         gap: 10px;
-        margin-top: 4px;
     }
 
-    .FooterLinks a {
-        color: #d43a7d;
-        text-decoration: none;
-        font-weight: 700;
-        transition:
-            color 0.25s ease,
-            text-shadow 0.25s ease;
+    .Selfies {
+        width: 100px;
+        height: 100px;
+        border-radius: 20px;
     }
 
-    .FooterLinks a:hover {
-        color: #ff6ba8;
-        text-shadow:
-            0 0 10px rgba(212, 58, 125, 0.4);
-        text-decoration: underline;
+    .Selfies:hover,
+    .Selfies:nth-child(2):hover {
+        transform: scale(1.04);
+    }
+
+    .Section:hover .SectionTitle {
+        letter-spacing: 3px;
+    }
+
+    .Quote:hover p {
+        letter-spacing: 2px;
     }
 
     .CookiePopup {
-        position: fixed;
-        left: 20px;
-        bottom: 20px;
-        width: 380px;
-        max-width: calc(100vw - 40px);
-        padding: 22px;
-        background:
-            linear-gradient(
-                135deg,
-                rgba(20, 14, 18, 0.98),
-                rgba(5, 5, 5, 0.98)
-            );
-        border: 2px solid #38232e;
-        border-left: 5px solid #b21f63;
-        box-shadow:
-            6px 6px 0 #080808,
-            0 0 25px rgba(169, 29, 89, 0.18);
-        z-index: 100000;
-        text-align: left;
-        animation:
-            CookieEnter 0.5s cubic-bezier(.16, 1, .3, 1) both;
-    }
-
-    .CookiePopup h3 {
-        font-family: "Anton", sans-serif;
-        font-size: 26px;
-        letter-spacing: 2px;
-        text-align: left;
-        margin-bottom: 8px;
-    }
-
-    .CookiePopup p {
-        color: #aaa;
-        font-size: 14px;
-        line-height: 1.5;
-        text-align: left;
-        margin-bottom: 16px;
-    }
-
-    .CookiePopup a {
-        color: #d43a7d;
-        text-decoration: none;
-        font-weight: 700;
-    }
-
-    .CookiePopup a:hover {
-        text-decoration: underline;
+        left: 12px;
+        bottom: 12px;
+        max-width: calc(100vw - 24px);
+        padding: 18px;
     }
 
     .CookieButtons {
-        display: flex;
-        gap: 10px;
+        flex-direction: column;
     }
 
     .CookieButton {
-        padding: 10px 18px;
-        background: #a91d59;
-        border: 2px solid #d43a7d;
-        color: #fff;
-        font-family: "Oswald", sans-serif;
-        font-size: 14px;
-        font-weight: 700;
-        cursor: pointer;
-        box-shadow:
-            3px 3px 0 #080808;
-        transition:
-            transform 0.25s ease,
-            background 0.25s ease,
-            box-shadow 0.25s ease;
+        width: 100%;
     }
 
-    .CookieButton:hover {
-        background: #d43a7d;
-        transform:
-            translateY(-2px);
-        box-shadow:
-            4px 4px 0 #080808;
+    footer {
+        padding: 25px 15px;
     }
 
-    .CookieButton:active {
-        transform:
-            translateY(1px);
+    .MainNav {
+        align-items: flex-start;
+        flex-direction: column;
     }
 
-    @keyframes HeaderEnter {
-        from {
-            opacity: 0;
-            transform:
-                translateY(-45px)
-                rotate(-3deg);
-        }
-
-        to {
-            opacity: 1;
-            transform:
-                translateY(0)
-                rotate(-0.4deg);
-        }
+    .MainNavLinks {
+        justify-content: flex-start;
     }
 
-    @keyframes IntroEnter {
-        from {
-            opacity: 0;
-            transform:
-                translateY(35px)
-                scale(0.97);
-        }
+    .MainNavLinks a {
+        padding: 7px 9px;
+        font-size: 12px;
+    }
+}
 
-        to {
-            opacity: 1;
-            transform:
-                translateY(0)
-                scale(1);
-        }
+@media (max-width: 420px) {
+    .AlbumLibrary {
+        grid-template-columns: 1fr;
     }
 
-    @keyframes MerchEnter {
-        from {
-            opacity: 0;
-            transform:
-                translateY(30px)
-                scale(0.92);
-        }
-
-        to {
-            opacity: 1;
-            transform:
-                translateY(0)
-                scale(1);
-        }
+    .AlbumCard {
+        grid-template-columns: 88px minmax(0,1fr);
+        gap: 10px;
+        padding: 9px;
     }
 
-    @keyframes FadeUp {
-        from {
-            opacity: 0;
-            transform: translateY(25px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    .AlbumCard img {
+        width: 88px;
+        height: 88px;
     }
 
-    @keyframes ImageEnter {
-        from {
-            opacity: 0;
-            transform:
-                translateY(35px)
-                scale(0.88)
-                rotate(4deg);
-        }
-
-        to {
-            opacity: 1;
-            transform:
-                translateY(0)
-                scale(1)
-                rotate(0);
-        }
+    .AlbumCardInfo h3 {
+        font-size: 18px;
     }
+}
 
-    @keyframes QuoteEnter {
-        from {
-            opacity: 0;
-            transform:
-                translateX(-35px)
-                rotate(-2deg);
-        }
-
-        to {
-            opacity: 1;
-            transform:
-                translateX(0)
-                rotate(0);
-        }
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
     }
-
-    @keyframes IntroShine {
-        0% {
-            left: -240px;
-        }
-
-        25%,
-        100% {
-            left: 115%;
-        }
-    }
-
-    @keyframes BackgroundPulse {
-        from {
-            opacity: 0.85;
-            transform: scale(1);
-        }
-
-        to {
-            opacity: 0.95;
-            transform: scale(1.08);
-        }
-    }
-
-    @keyframes CookieEnter {
-        from {
-            opacity: 0;
-            transform:
-                translateY(30px)
-                scale(0.95);
-        }
-
-        to {
-            opacity: 1;
-            transform:
-                translateY(0)
-                scale(1);
-        }
-    }
-
-    @media (max-width: 700px) {
-
-        .ComingSoon {
-            grid-template-columns: 1fr;
-            gap: 22px;
-            padding: 15px;
-        }
-
-        .AlbumCover {
-            width: min(100%, 320px);
-            margin: 0 auto;
-        }
-
-        .ComingSoonInfo {
-            align-items: center;
-            padding: 5px 10px 15px;
-        }
-
-        .ComingSoonLabel,
-        .ComingSoonTitle,
-        .ComingSoonArtist,
-        .ComingSoonText {
-            text-align: center;
-        }
-
-        .ComingSoon .ListenButton {
-            width: 100%;
-            text-align: center;
-        }
-    }
-
-    @media (max-width: 600px) {
-
-        .Page {
-            padding: 20px 12px 0;
-            gap: 45px;
-        }
-
-        .Header {
-            padding: 30px 10px;
-        }
-
-        .Logo {
-            letter-spacing: 3px;
-        }
-
-        .Header:hover .Logo {
-            transform: none;
-            letter-spacing: 4px;
-        }
-
-        .Official {
-            font-size: 13px;
-            letter-spacing: 4px;
-        }
-
-        .Intro {
-            padding: 28px 18px;
-        }
-
-        .Intro::before,
-        .Support::before {
-            left: 18px;
-        }
-
-        .Intro p,
-        .AboutText {
-            font-size: 16px;
-        }
-
-        .MerchButton {
-            min-height: 90px;
-            padding: 18px 20px;
-            gap: 15px;
-        }
-
-        .MerchSmall {
-            font-size: 10px;
-            letter-spacing: 2.5px;
-        }
-
-        .MerchMain {
-            font-size: 31px;
-            letter-spacing: 1px;
-        }
-
-        .MerchArrow {
-            font-size: 35px;
-        }
-
-        .MusicItem {
-            flex-direction: column;
-            align-items: stretch;
-            gap: 15px;
-        }
-
-        .MusicInfo,
-        .MusicName,
-        .MusicArtist {
-            text-align: center;
-        }
-
-        .ListenButton {
-            width: 100%;
-        }
-
-        .SocialButton {
-            width: 100%;
-        }
-
-        .Support {
-            padding: 24px 16px;
-        }
-
-        .SupportButtons {
-            gap: 8px;
-        }
-
-        .SupportButton {
-            min-width: 80px;
-            flex: 1;
-            padding: 12px 14px;
-        }
-
-        .SectionSelfies {
-            gap: 10px;
-        }
-
-        .Selfies {
-            width: 100px;
-            height: 100px;
-            border-radius: 20px;
-        }
-
-        .Selfies:hover,
-        .Selfies:nth-child(2):hover {
-            transform: scale(1.04);
-        }
-
-        .Section:hover .SectionTitle {
-            letter-spacing: 3px;
-        }
-
-        .Quote:hover p {
-            letter-spacing: 2px;
-        }
-
-        .CookiePopup {
-            left: 12px;
-            bottom: 12px;
-            max-width: calc(100vw - 24px);
-            padding: 18px;
-        }
-
-        .CookieButtons {
-            flex-direction: column;
-        }
-
-        .CookieButton {
-            width: 100%;
-        }
-
-        footer {
-            padding: 25px 15px;
-        }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-
-        *,
-        *::before,
-        *::after {
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
-            scroll-behavior: auto !important;
-        }
-
-    }
-
+}
 </style>
-
 </head>
 
 <body>
-
 <main class="Page">
 
+<nav class="MainNav" aria-label="Main navigation">
+    <a class="MainNavBrand" href="index.html">JK<span>3</span>R</a>
+    <div class="MainNavLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About JK3R</a>
+        <a href="#releases">Music</a>
+        <a href="#photos">Photos</a>
+        <a href="merch.html">Merch</a>
+        <a href="#socials">Socials</a>
+    </div>
+</nav>
+
 <header class="Header">
-
-
-
-<h1 class="Logo">
-    JK3R
-</h1>
-
-<p class="Official">
-    Official Website
-</p>
-
+    <h1 class="Logo">JK3R</h1>
+    <p class="Official">Official Website</p>
 </header>
 
 <section class="Intro">
-
-<h2>
-    Jai Wilson
-</h2>
-
-<p>
-    Musician. Singer. Songwriter. Content Creator.
-</p>
-
-<p>
-    Welcome to the official home of JK3R.
-</p>
-
+    <h2>Jai Wilson</h2>
+    <p>Musician. Singer. Songwriter. Content Creator.</p>
+    <p>Welcome to the official home of JK3R.</p>
 </section>
 
 <section class="Section" style="display: all;">
-    <h2 class="SectionTitle">
-        New Merch <span>Out Now</span>
-    </h2>
+    <h2 class="SectionTitle">New Merch <span>Out Now</span></h2>
     <div class="SectionLine"></div>
 </section>
 
 <section class="MerchCTA">
-
-<a
- class="MerchButton"
- href="merch.html"
- target="_blank"
- rel="noopener noreferrer">
-
-<span class="MerchButtonText">
-
-    <span class="MerchSmall">
-        OFFICIAL JK3R STORE
-    </span>
-
-    <span class="MerchMain">
-        SHOP MERCH
-    </span>
-
-</span>
-
-<span class="MerchArrow">
-    →
-</span>
-
-</a>
-
+    <a class="MerchButton" href="merch.html" target="_blank" rel="noopener noreferrer">
+        <span class="MerchButtonText">
+            <span class="MerchSmall">OFFICIAL JK3R STORE</span>
+            <span class="MerchMain">SHOP MERCH</span>
+        </span>
+        <span class="MerchArrow">→</span>
+    </a>
 </section>
 
 <section class="Section">
+    <h2 class="SectionTitle">About <span>JK3R</span></h2>
+    <div class="SectionLine"></div>
 
-<h2 class="SectionTitle">
-    About <span>JK3R</span>
-</h2>
-
-<div class="SectionLine"></div>
-
-<p class="AboutText">
-    Jai Wilson, better known as JK3R, is a musician,
-    singer and songwriter from the UK. His music blends
-    rock, emo, goth and rap influences into his own sound.
-</p>
-
-<p class="AboutText">
-    Alongside music, JK3R creates online content and
-    continues to build his own identity as an artist.
-</p>
-
-</section>
-
-<section class="Section">
-
-<h2 class="SectionTitle">
-    Coming <span>SOON!</span>
-</h2>
-
-<div class="SectionLine"></div>
-
-<div class="ComingSoon">
-
-<img
-    class="AlbumCover"
-    src="Images/AlbumJATL.png"
-    alt="I Was Just About To Leave album cover">
-
-<div class="ComingSoonInfo">
-
-    <p class="ComingSoonLabel">
-        UPCOMING ALBUM
+    <p class="AboutText">
+        Jai Wilson, better known as JK3R, is a musician,
+        singer and songwriter from the UK. His music blends
+        rock, emo, goth and rap influences into his own sound.
     </p>
 
-    <h3 class="ComingSoonTitle">
-        I WAS JUST ABOUT TO LEAVE
-    </h3>
-
-    <p class="ComingSoonArtist">
-        JK3R
+    <p class="AboutText">
+        Alongside music, JK3R creates online content and
+        continues to build his own identity as an artist.
     </p>
 
-    <p class="ComingSoonText">
-        A new album from <span>JK3R</span>. Release Date: <span>October 1st 2026</span>.
+    <a class="AboutLink" href="about.html">READ THE FULL BIOGRAPHY →</a>
+</section>
+
+<section class="Section" id="releases">
+    <h2 class="SectionTitle">Album <span>Library</span></h2>
+    <div class="SectionLine"></div>
+    <p class="AboutText">
+        Albums, EPs and projects in one place. Add a new release by editing
+        the ALBUMS list near the bottom of this file.
     </p>
-
-    <a
-        class="ListenButton"
-        href="https://open.spotify.com/album/5LbkkP3sX8rSCi3T3cu6Ph"
-        target="_blank"
-        rel="noopener noreferrer">
-        VIEW ON SPOTIFY
-    </a>
-
-</div>
-
-</div>
-
-<h2 class="SectionTitle">
-    New <span>Releases</span>
-</h2>
-
-<div class="SectionLine"></div>
-
-<div class="Music">
-
-<div class="MusicItem">
-
-    <div class="MusicInfo">
-
-        <p class="MusicNumber">
-            NEW
-        </p>
-
-        <h3 class="MusicName">
-            YOUR MINE
-        </h3>
-
-        <p class="MusicArtist">
-            JK3R
-        </p>
-
-    </div>
-
-    <a
-        class="ListenButton"
-        href="https://open.spotify.com/album/5LbkkP3sX8rSCi3T3cu6Ph"
-        target="_blank"
-        rel="noopener noreferrer">
-        LISTEN
-    </a>
-
-</div>
-
-</div>
-
-<h2 class="SectionTitle">
-    Top <span>3</span>
-</h2>
-
-<div class="SectionLine"></div>
-
-<div class="Music">
-
-<div class="MusicItem">
-
-    <div class="MusicInfo">
-
-        <p class="MusicNumber">
-            01
-        </p>
-
-        <h3 class="MusicName">
-            ZOMBIE STYLE MAKEOUT SESSION
-        </h3>
-
-        <p class="MusicArtist">
-            JK3R & Rebzyyx
-        </p>
-
-    </div>
-
-    <a
-        class="ListenButton"
-        href="https://open.spotify.com/track/5uUPZzUDDN5rLXsbNwHXFv"
-        target="_blank"
-        rel="noopener noreferrer">
-        LISTEN
-    </a>
-
-</div>
-
-<div class="MusicItem">
-
-    <div class="MusicInfo">
-
-        <p class="MusicNumber">
-            02
-        </p>
-
-        <h3 class="MusicName">
-            ILoveZ&lt;3
-        </h3>
-
-        <p class="MusicArtist">
-            JK3R & Rebzyyx
-        </p>
-
-    </div>
-
-    <a
-        class="ListenButton"
-        href="https://open.spotify.com/album/7D4g6DgcrUu1BKRMyCU6tb"
-        target="_blank"
-        rel="noopener noreferrer">
-        LISTEN
-    </a>
-
-</div>
-
-<div class="MusicItem">
-
-    <div class="MusicInfo">
-
-        <p class="MusicNumber">
-            03
-        </p>
-
-        <h3 class="MusicName">
-            All I Want Is You
-        </h3>
-
-        <p class="MusicArtist">
-            JK3R & Rebzyyx
-        </p>
-
-    </div>
-
-    <a
-        class="ListenButton"
-        href="https://open.spotify.com/artist/1ecMML3OAT0IoBW6kQtK1o"
-        target="_blank"
-        rel="noopener noreferrer">
-        LISTEN
-    </a>
-
-</div>
-
-</div>
-
+    <div class="AlbumLibrary" id="AlbumLibrary"></div>
 </section>
 
 <section class="Section">
+    <h2 class="SectionTitle">Top <span>3</span></h2>
+    <div class="SectionLine"></div>
 
-<h2 class="SectionTitle">
-    Sexy <span>Jai</span>
-</h2>
+    <div class="Music">
+        <div class="MusicItem">
+            <div class="MusicInfo">
+                <p class="MusicNumber">01</p>
+                <h3 class="MusicName">ZOMBIE STYLE MAKEOUT SESSION</h3>
+                <p class="MusicArtist">JK3R &amp; Rebzyyx</p>
+            </div>
+            <a class="ListenButton"
+               href="https://open.spotify.com/track/5uUPZzUDDN5rLXsbNwHXFv"
+               target="_blank" rel="noopener noreferrer">LISTEN</a>
+        </div>
 
-<div class="SectionLine"></div>
+        <div class="MusicItem">
+            <div class="MusicInfo">
+                <p class="MusicNumber">02</p>
+                <h3 class="MusicName">ILoveZ&lt;3</h3>
+                <p class="MusicArtist">JK3R &amp; Rebzyyx</p>
+            </div>
+            <a class="ListenButton"
+               href="https://open.spotify.com/album/7D4g6DgcrUu1BKRMyCU6tb"
+               target="_blank" rel="noopener noreferrer">LISTEN</a>
+        </div>
 
-</section>
-
-<section class="SectionSelfies">
-
-<img
- class="Selfies"
- src="Images/JK3RImage1.jpg"
- onclick="OpenImage(this)"
- alt="JK3R Jai Wilson">
-
-<img
- class="Selfies"
- src="Images/JK3RImage2.jpg"
- onclick="OpenImage(this)"
- alt="JK3R Jai Wilson">
-
-<img
- class="Selfies"
- src="Images/JK3RImage3.jpg"
- onclick="OpenImage(this)"
- alt="JK3R Jai Wilson">
-
+        <div class="MusicItem">
+            <div class="MusicInfo">
+                <p class="MusicNumber">03</p>
+                <h3 class="MusicName">All I Want Is You</h3>
+                <p class="MusicArtist">JK3R &amp; Rebzyyx</p>
+            </div>
+            <a class="ListenButton"
+               href="https://open.spotify.com/artist/1ecMML3OAT0IoBW6kQtK1o"
+               target="_blank" rel="noopener noreferrer">LISTEN</a>
+        </div>
+    </div>
 </section>
 
 <section class="Section">
+    <h2 class="SectionTitle">Sexy <span>Jai</span></h2>
+    <div class="SectionLine"></div>
+</section>
 
-<h2 class="SectionTitle">
-    Find <span>JK3R</span>
-</h2>
+<section class="Section" id="photos">
+    <h2 class="SectionTitle">Photos of <span>Jai</span></h2>
+    <div class="SectionLine"></div>
+    <p class="AboutText">
+        New photos can be added by uploading them to the Images folder
+        and adding their filenames to the JAI_PHOTOS list in the script below.
+    </p>
+    <div class="GalleryGrid" id="JaiGallery"></div>
+</section>
 
-<div class="SectionLine"></div>
+<section class="Section" id="socials">
+    <h2 class="SectionTitle">Find <span>JK3R</span></h2>
+    <div class="SectionLine"></div>
 
-<div class="Socials">
-
-<a
-    class="SocialButton"
-    href="https://www.youtube.com/@jk3r_"
-    target="_blank"
-    rel="noopener noreferrer">
-    YouTube
-</a>
-
-<a
-    class="SocialButton"
-    href="https://www.instagram.com/jk3r_was_here/"
-    target="_blank"
-    rel="noopener noreferrer">
-    Instagram
-</a>
-
-<a
-    class="SocialButton"
-    href="https://open.spotify.com/artist/1ecMML3OAT0IoBW6kQtK1o"
-    target="_blank"
-    rel="noopener noreferrer">
-    Spotify
-</a>
-
-</div>
-
+    <div class="Socials">
+        <a class="SocialButton" href="https://www.youtube.com/@jk3r_" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a class="SocialButton" href="https://www.instagram.com/jk3r_was_here/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a class="SocialButton" href="https://open.spotify.com/artist/1ecMML3OAT0IoBW6kQtK1o" target="_blank" rel="noopener noreferrer">Spotify</a>
+    </div>
 </section>
 
 <section class="Quote">
-
-<p>
-    MAKE NOISE. MAKE MUSIC.
-</p>
-
+    <p>MAKE NOISE. MAKE MUSIC.</p>
 </section>
 
 <section class="Support">
+    <p class="SectionTitle">Support <span>The Web</span></p>
+    <div class="SectionLine"></div>
+    <p class="SupportText">Support a new web designer — all donations are appreciated!</p>
 
-<p class="SectionTitle">
-    Support <span>The Web</span>
-</p>
-
-<div class="SectionLine"></div>
-
-<p class="SupportText">
-    Support a new web designer — all donations are appreciated!
-</p>
-
-<div class="SupportButtons">
-
-<a
-    class="SupportButton"
-    href="https://www.paypal.com/paypalme/fizogon/1"
-    target="_blank"
-    rel="noopener noreferrer">
-    £1
-</a>
-
-<a
-    class="SupportButton"
-    href="https://www.paypal.com/paypalme/fizogon/5"
-    target="_blank"
-    rel="noopener noreferrer">
-    £5
-</a>
-
-<a
-    class="SupportButton"
-    href="https://www.paypal.com/paypalme/fizogon/25"
-    target="_blank"
-    rel="noopener noreferrer">
-    £25
-</a>
-
-</div>
-
+    <div class="SupportButtons">
+        <a class="SupportButton" href="https://www.paypal.com/paypalme/fizogon/1" target="_blank" rel="noopener noreferrer">£1</a>
+        <a class="SupportButton" href="https://www.paypal.com/paypalme/fizogon/5" target="_blank" rel="noopener noreferrer">£5</a>
+        <a class="SupportButton" href="https://www.paypal.com/paypalme/fizogon/25" target="_blank" rel="noopener noreferrer">£25</a>
+    </div>
 </section>
 
 <footer>
+    <div class="FooterLine">
+        © 2026 GothRift Recordz <strong>(gothriftrecordz@gmail.com)</strong>
+    </div>
 
-<div class="FooterLine">
-    © 2026 GothRift Recordz
-    <strong>(gothriftrecordz@gmail.com)</strong>
-</div>
+    <div class="FooterLine">
+        Designed By Fizogon <strong>(fizogonbusiness@gmail.com)</strong>
+    </div>
 
-<div class="FooterLine">
-    Designed By Fizogon
-    <strong>(fizogonbusiness@gmail.com)</strong>
-</div>
-
-<div class="FooterLinks">
-
-<a href="terms.html">
-    Terms Of Service
-</a>
-
-</div>
-
+    <div class="FooterLinks">
+        <a href="terms.html">Terms Of Service</a>
+    </div>
 </footer>
 
 </main>
 
-<div
-    class="ImageFullscreen"
-    id="ImageFullscreen"
-    onclick="CloseImage()">
-
-<img
- id="FullscreenImage"
- src=""
- alt="Fullscreen JK3R image"
- onclick="event.stopPropagation()">
-
+<div class="ImageFullscreen" id="ImageFullscreen" onclick="CloseImage()">
+    <img id="FullscreenImage" src="" alt="Fullscreen JK3R image" onclick="event.stopPropagation()">
 </div>
 
-<div
-    class="CookiePopup"
-    id="CookiePopup">
+<div class="CookiePopup" id="CookiePopup">
+    <h3>Cookies</h3>
 
-<h3>
-    Cookies
-</h3>
+    <p>
+        This website uses a cookie to remember your cookie preference.
+        No tracking or advertising cookies are used. Ignoring Cookies Will
+        Result In Cookie Popup Showing Again.
+        <a href="terms.html">Terms Of Service</a>
+    </p>
 
-<p>
-    This website uses a cookie to remember your cookie
-    preference. No tracking or advertising cookies are used.
-    Ignoring Cookies Will Result In Cookie Popup Showing Again.
-    <a href="terms.html">
-        Terms Of Service
-    </a>
-</p>
-
-<div class="CookieButtons">
-
-<button
-    class="CookieButton"
-    onclick="AcceptCookies(true)">
-    Accept Cookies
-</button>
-
-<button
-    class="CookieButton"
-    onclick="AcceptCookies(false)">
-    Ignore Cookies
-</button>
-
-</div>
-
+    <div class="CookieButtons">
+        <button class="CookieButton" onclick="AcceptCookies(true)">Accept Cookies</button>
+        <button class="CookieButton" onclick="AcceptCookies(false)">Ignore Cookies</button>
+    </div>
 </div>
 
 <script>
-
-    const ImageFullscreen = document.getElementById("ImageFullscreen");
-    const FullscreenImage = document.getElementById("FullscreenImage");
-    const CookiePopup = document.getElementById("CookiePopup");
-    const CookieName = "jk3r_cookie_consent";
-
-    function OpenImage(image) {
-        FullscreenImage.src = image.src;
-        ImageFullscreen.style.display = "flex";
-        document.body.style.overflow = "hidden";
+/* Add new albums here. Upload each cover to Images first. */
+const ALBUMS = [
+    {
+        title: "I Was Just About To Leave",
+        type: "Album",
+        year: "2026",
+        cover: "Images/AlbumJATL.png",
+        link: "https://open.spotify.com/album/5LbkkP3sX8rSCi3T3cu6Ph",
+        description: "JK3R's album project."
     }
 
-    function CloseImage() {
-        ImageFullscreen.style.display = "none";
-        FullscreenImage.src = "";
-        document.body.style.overflow = "";
-    }
+    /*
+    Add another album by copying this template and removing the comment markers:
 
-    function AcceptCookies(Ignore) {
-        if (!Ignore) {
-            document.cookie =
+    ,{
+        title: "NEW ALBUM",
+        type: "Album",
+        year: "2027",
+        cover: "Images/NewAlbumCover.png",
+        link: "https://open.spotify.com/album/YOUR_ALBUM_ID",
+        description: "Description of the album."
+    }
+    */
+];
+
+/* Add new photos here. Upload each photo to Images first. */
+const JAI_PHOTOS = [
+    { src: "Images/JK3RImage1.jpg", alt: "JK3R / Jai Wilson photo 1" },
+    { src: "Images/JK3RImage2.jpg", alt: "JK3R / Jai Wilson photo 2" },
+    { src: "Images/JK3RImage3.jpg", alt: "JK3R / Jai Wilson photo 3" }
+
+    /*
+    Add another photo by copying this line and removing the comment markers:
+
+    ,{ src: "Images/JK3RImage4.jpg", alt: "Jai Wilson photo 4" }
+    */
+];
+
+const AlbumLibrary = document.getElementById("AlbumLibrary");
+
+if (AlbumLibrary) {
+    AlbumLibrary.innerHTML = ALBUMS.map((album) => `
+        <article class="AlbumCard">
+            <img src="${album.cover}" alt="${album.title} cover" loading="lazy">
+            <div class="AlbumCardInfo">
+                <h3>${album.title}</h3>
+                <p>${album.type}${album.year ? ` · ${album.year}` : ""}<br>${album.description || ""}</p>
+                <a class="ListenButton" href="${album.link}" target="_blank" rel="noopener noreferrer">LISTEN / VIEW</a>
+            </div>
+        </article>
+    `).join("");
+}
+
+const JaiGallery = document.getElementById("JaiGallery");
+
+if (JaiGallery) {
+    JaiGallery.innerHTML = JAI_PHOTOS.map((photo) => `
+        <img class="GalleryItem" src="${photo.src}" alt="${photo.alt}" loading="lazy" onclick="OpenImage(this)">
+    `).join("");
+}
+
+const ImageFullscreen = document.getElementById("ImageFullscreen");
+const FullscreenImage = document.getElementById("FullscreenImage");
+const CookiePopup = document.getElementById("CookiePopup");
+const CookieName = "jk3r_cookie_consent";
+
+function OpenImage(image) {
+    FullscreenImage.src = image.src;
+    ImageFullscreen.style.display = "flex";
+    document.body.style.overflow = "hidden";
+}
+
+function CloseImage() {
+    ImageFullscreen.style.display = "none";
+    FullscreenImage.src = "";
+    document.body.style.overflow = "";
+}
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+        CloseImage();
+    }
+});
+
+function AcceptCookies(accepted) {
+    if (accepted) {
+        document.cookie =
             CookieName +
             "=accepted; Max-Age=31536000; Path=/; SameSite=Lax; Secure";
-        }
-
-        CookiePopup.style.display = "none";
     }
 
-    if (
-        document.cookie
-            .split("; ")
-            .some(cookie => cookie.startsWith(CookieName + "=accepted"))
-    ) {
-        CookiePopup.style.display = "none";
-    }
+    CookiePopup.style.display = "none";
+}
 
+if (
+    document.cookie
+        .split("; ")
+        .some(cookie => cookie.startsWith(CookieName + "=accepted"))
+) {
+    CookiePopup.style.display = "none";
+}
 </script>
 
 </body>
-
 </html>
