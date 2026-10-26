@@ -5,44 +5,49 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>About JK3R (Jai Wilson) — Official Artist Biography</title>
-<meta name="description" content="Learn more about JK3R, also known as Jai Wilson: UK musician, singer, songwriter and content creator. Explore his sound, music, career and frequently asked questions.">
+<meta name="description" content="Learn more about JK3R, also known as Jai Wilson: UK musician, singer, songwriter and content creator. Explore his sound, music and background.">
 <meta name="author" content="JK3R">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://jk3r.com/about.html">
-<link rel="icon" type="image/png" href="Images/JK3RImage3.jpg">
-<meta name="theme-color" content="#090609">
 
 <meta property="og:type" content="profile">
-<meta property="og:title" content="About JK3R (Jai Wilson) — Official Website">
-<meta property="og:description" content="The story, music and creative identity of JK3R, also known as Jai Wilson.">
+<meta property="og:title" content="About JK3R (Jai Wilson) — Official Artist Biography">
+<meta property="og:description" content="Learn more about JK3R, also known as Jai Wilson: UK musician, singer, songwriter and content creator.">
 <meta property="og:url" content="https://jk3r.com/about.html">
-<meta property="og:image" content="https://jk3r.com/Images/JK3RImage1.jpg">
-<meta property="og:site_name" content="JK3R Official Website">
+<meta property="og:site_name" content="JK3R — Official Website">
+<meta property="og:image" content="https://jk3r.com/images/ProfilePicture1.png">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="About JK3R (Jai Wilson)">
-<meta name="twitter:description" content="Learn more about the artist behind JK3R.">
-<meta name="twitter:image" content="https://jk3r.com/Images/JK3RImage1.jpg">
+<meta name="twitter:description" content="Learn more about JK3R, also known as Jai Wilson, on his official website.">
+<meta name="twitter:image" content="https://jk3r.com/images/ProfilePicture1.png">
 
+<meta name="theme-color" content="#090609">
+
+<link rel="icon" href="/images/Icon.png">
+<link rel="apple-touch-icon" href="/images/ProfilePicture1.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7272462336635844"
      crossorigin="anonymous"></script>
 
+<!-- Structured data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
-  "@id": "https://jk3r.com/about.html#profile",
-  "url": "https://jk3r.com/about.html",
   "name": "About JK3R (Jai Wilson)",
-  "description": "Official artist biography and frequently asked questions about JK3R.",
+  "url": "https://jk3r.com/about.html",
+  "description": "The official biography page for JK3R, also known as Jai Wilson, a UK musician, singer, songwriter and content creator.",
   "mainEntity": {
     "@type": "Person",
-    "@id": "https://jk3r.com/#jk3r",
     "name": "Jai Wilson",
     "alternateName": "JK3R",
     "url": "https://jk3r.com/",
-    "image": "https://jk3r.com/Images/JK3RImage1.jpg",
-    "jobTitle": "Musician, Singer, Songwriter and Content Creator",
     "sameAs": [
       "https://www.youtube.com/@jk3r_",
       "https://www.instagram.com/jk3r_was_here/",
@@ -53,1111 +58,483 @@
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&display=swap');
-
 :root {
-    color-scheme: dark;
+    --background: #090609;
+    --background-light: #120b11;
     --pink: #d43a7d;
-    --pink-dark: #a91d59;
-    --pink-light: #ff79ac;
-    --muted: #bdb5bb;
-    --panel: rgba(8,6,8,.82);
-    --line: #38232e;
+    --pink-bright: #ff4b9b;
+    --text: #f8f3f6;
+    --muted: #b9aab3;
+    --border: rgba(255, 75, 155, 0.22);
 }
 
 * {
     box-sizing: border-box;
-    margin: 0;
 }
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 90px;
 }
 
 body {
-    min-height: 100vh;
-    overflow-x: hidden;
-    font-family: "Oswald", sans-serif;
-    color: #f5f5f5;
-    background:
-        linear-gradient(rgba(5,3,5,.86),rgba(5,3,5,.97)),
-        repeating-linear-gradient(
-            0deg,
-            #181217 0,
-            #181217 2px,
-            #0d0a0d 2px,
-            #0d0a0d 5px
-        );
-}
-
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    background:
-        radial-gradient(circle at 12% 12%,rgba(190,25,88,.22),transparent 32%),
-        radial-gradient(circle at 88% 75%,rgba(120,10,60,.2),transparent 34%),
-        url("Images/JK3R_Background.png") center/cover no-repeat;
-    opacity: .85;
-    z-index: -1;
-    animation: BackgroundPulse 8s ease-in-out infinite alternate;
-}
-
-::selection {
-    background: var(--pink-dark);
-    color: #fff;
-}
-
-a,
-button {
-    -webkit-tap-highlight-color: transparent;
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+    font-family: 'Oswald', sans-serif;
+    line-height: 1.7;
 }
 
 a {
-    color: inherit;
+    color: var(--pink-bright);
+    text-decoration: none;
 }
 
-.Page {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 22px 18px 0;
-    gap: 34px;
+a:hover {
+    color: white;
 }
 
-.Nav {
-    width: min(1100px,100%);
+header {
+    position: relative;
+    padding: 22px 7%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    gap: 18px;
-    padding: 13px 18px;
-    background: rgba(7,6,7,.82);
-    border: 1px solid #3b2932;
-    border-top: 3px solid var(--pink-dark);
-    box-shadow: 5px 5px 0 rgba(0,0,0,.4);
-    backdrop-filter: blur(8px);
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(9, 6, 9, 0.95);
 }
 
-.NavBrand {
-    font-family: "Anton",sans-serif;
-    font-size: 27px;
+.logo {
+    color: white;
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
     letter-spacing: 2px;
-    text-decoration: none;
-    text-shadow: 2px 2px 0 #080808;
 }
 
-.NavBrand span {
-    color: var(--pink);
-}
-
-.NavLinks {
+nav {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: 8px;
+    gap: 22px;
 }
 
-.NavLinks a {
-    padding: 9px 13px;
-    color: #c8c0c5;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 14px;
-    border: 1px solid transparent;
-    transition: .25s ease;
+nav a {
+    color: var(--text);
+    font-size: 16px;
+    transition: color 0.2s ease;
 }
 
-.NavLinks a:hover,
-.NavLinks a[aria-current="page"] {
-    color: #fff;
-    background: rgba(169,29,89,.18);
-    border-color: #79304e;
+nav a:hover,
+nav a.active {
+    color: var(--pink-bright);
 }
 
-.Hero {
-    width: min(1100px,100%);
-    position: relative;
-    display: grid;
-    grid-template-columns: minmax(0,1.35fr) minmax(240px,.65fr);
-    gap: 34px;
-    align-items: center;
-    padding: clamp(28px,5vw,58px);
-    background: linear-gradient(115deg,rgba(25,15,22,.96),rgba(5,5,5,.88));
-    border-top: 3px solid var(--pink-dark);
-    border-bottom: 3px solid var(--pink-dark);
-    box-shadow: 10px 10px 0 rgba(145,20,75,.16);
-    overflow: hidden;
-    animation: IntroEnter .8s cubic-bezier(.16,1,.3,1) both;
+main {
+    width: min(1100px, 88%);
+    margin: 0 auto;
 }
 
-.Hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        115deg,
-        transparent 20%,
-        rgba(255,255,255,.045) 45%,
-        transparent 65%
-    );
-    transform: translateX(-120%);
-    animation: Shine 7s 1s ease-in-out infinite;
-}
-
-.HeroCopy,
-.HeroImageWrap {
-    position: relative;
-    z-index: 1;
-}
-
-.Eyebrow {
-    color: var(--pink);
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-}
-
-.Hero h1 {
-    font-family: "Anton",sans-serif;
-    font-size: clamp(66px,11vw,130px);
-    line-height: .84;
-    letter-spacing: 3px;
-    text-shadow: 5px 5px 0 var(--pink-dark),10px 10px 0 #050505;
-}
-
-.Hero h1 span {
-    display: block;
-    color: #d7d0d4;
-    font-size: .42em;
-    letter-spacing: 5px;
-    line-height: 1.35;
-    text-shadow: 3px 3px 0 #090609;
-}
-
-.HeroIntro {
-    max-width: 620px;
-    margin-top: 24px;
-    color: #d0c8cd;
-    font-size: 19px;
-    line-height: 1.65;
-}
-
-.HeroActions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 25px;
-}
-
-.Button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 13px 20px;
-    background: var(--pink-dark);
-    border: 2px solid var(--pink);
-    box-shadow: 4px 4px 0 #080808;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 1px;
-    transition: transform .3s ease,background .3s ease,box-shadow .3s ease;
-}
-
-.Button:hover {
-    background: var(--pink);
-    transform: translateY(-4px);
-    box-shadow: 6px 7px 0 #080808,0 0 20px #d43a7d38;
-}
-
-.Button.Secondary {
-    background: #101010;
-    border-color: #51404a;
-}
-
-.Button.Secondary:hover {
-    background: #26131d;
-    border-color: var(--pink);
-}
-
-.HeroImageWrap {
-    justify-self: center;
-    width: min(100%,330px);
-    position: relative;
-    transform: rotate(2deg);
-}
-
-.HeroImageWrap::before {
-    content: "";
-    position: absolute;
-    inset: 12px -12px -12px 12px;
-    border: 2px solid var(--pink-dark);
-    z-index: -1;
-}
-
-.HeroImage {
-    display: block;
-    width: 100%;
-    aspect-ratio: 4/5;
-    object-fit: cover;
-    object-position: center;
-    border: 2px solid #52303f;
-    filter: saturate(.88) contrast(1.05);
-    box-shadow: 0 0 35px #a91d5924;
-}
-
-.Section {
-    width: min(1000px,96%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-    animation: FadeUp .7s ease both;
-}
-
-.SectionTitle {
-    font-family: "Anton",sans-serif;
-    font-size: clamp(36px,6vw,53px);
-    letter-spacing: 3px;
-    text-transform: uppercase;
+.hero {
+    padding: 100px 0 70px;
     text-align: center;
-    transform: rotate(-.6deg);
-    transition: letter-spacing .3s ease,transform .3s ease;
 }
 
-.SectionTitle span {
-    color: #b21f63;
-    text-shadow: 3px 3px 0 #080808;
-}
-
-.Section:hover .SectionTitle {
+.eyebrow {
+    color: var(--pink-bright);
+    text-transform: uppercase;
     letter-spacing: 4px;
-    transform: rotate(0);
+    font-size: 14px;
+    font-weight: 600;
 }
 
-.SectionLine {
-    width: 75px;
-    height: 4px;
-    background: var(--pink-dark);
-    box-shadow: 0 0 12px #a91d5940;
-    transition: width .35s ease;
+h1,
+h2,
+h3 {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    line-height: 1.15;
+    margin-top: 0;
 }
 
-.Section:hover .SectionLine {
-    width: 125px;
+h1 {
+    font-size: clamp(48px, 9vw, 92px);
+    letter-spacing: 2px;
+    margin-bottom: 18px;
 }
 
-.Lead {
-    max-width: 780px;
-    text-align: center;
-    color: #d0c8cd;
-    font-size: 18px;
-    line-height: 1.75;
+h1 span {
+    color: var(--pink-bright);
 }
 
-.BioGrid {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2,minmax(0,1fr));
-    gap: 16px;
-    margin-top: 8px;
+.hero p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 20px;
 }
 
-.BioCard {
-    position: relative;
-    padding: 25px 25px 27px;
-    background: linear-gradient(135deg,rgba(30,16,27,.94),rgba(5,5,5,.9));
-    border: 1px solid #392832;
-    border-left: 5px solid #771440;
-    box-shadow: 6px 6px 0 rgba(0,0,0,.34);
-    transition: transform .3s ease,border-color .3s ease,box-shadow .3s ease;
+section {
+    padding: 50px 0;
+    border-top: 1px solid var(--border);
 }
 
-.BioCard:hover {
-    transform: translateY(-5px);
-    border-color: var(--pink-dark);
-    box-shadow: 8px 9px 0 rgba(0,0,0,.4),0 0 25px #a91d5919;
+h2 {
+    font-size: clamp(32px, 5vw, 48px);
+    margin-bottom: 22px;
 }
 
-.CardNumber {
-    color: var(--pink);
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    margin-bottom: 8px;
-}
-
-.BioCard h3 {
-    font-family: "Anton",sans-serif;
-    font-size: 29px;
-    letter-spacing: 1px;
+h3 {
+    font-size: 25px;
     margin-bottom: 10px;
 }
 
-.BioCard p {
+.section-intro {
     color: var(--muted);
-    font-size: 16px;
-    line-height: 1.7;
-}
-
-.Facts {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3,minmax(0,1fr));
-    gap: 12px;
-    margin-top: 8px;
-}
-
-.Fact {
-    padding: 22px 12px;
-    background: rgba(5,5,5,.75);
-    border: 1px solid #35232c;
-    border-top: 3px solid var(--pink-dark);
-    text-align: center;
-    transition: transform .3s ease,border-color .3s ease;
-}
-
-.Fact:hover {
-    transform: translateY(-4px);
-    border-top-color: var(--pink);
-}
-
-.Fact strong {
-    display: block;
-    font-family: "Anton",sans-serif;
-    font-size: 23px;
-    letter-spacing: 1px;
-}
-
-.Fact span {
-    display: block;
-    margin-top: 6px;
-    color: #a9a0a6;
-    font-size: 13px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-}
-
-.Timeline {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    margin-top: 8px;
-}
-
-.TimelineItem {
-    display: grid;
-    grid-template-columns: 110px 1fr;
-    gap: 22px;
-    padding: 22px 25px;
-    background: rgba(5,5,5,.72);
-    border: 1px solid #2e2229;
-    border-bottom: 0;
-    transition: background .25s ease,border-color .25s ease;
-}
-
-.TimelineItem:last-child {
-    border-bottom: 1px solid #2e2229;
-}
-
-.TimelineItem:hover {
-    background: rgba(80,18,48,.2);
-    border-color: #6e2c48;
-}
-
-.TimelineYear {
-    font-family: "Anton",sans-serif;
-    font-size: 25px;
-    color: var(--pink);
-    letter-spacing: 1px;
-}
-
-.TimelineItem h3 {
-    font-family: "Anton",sans-serif;
-    font-size: 23px;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
-}
-
-.TimelineItem p {
-    color: var(--muted);
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-.Note {
     max-width: 760px;
-    color: #8f858c;
-    text-align: center;
-    font-size: 14px;
-    line-height: 1.6;
 }
 
-.FAQ {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 8px;
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 28px;
 }
 
-.FAQ details {
-    background: linear-gradient(90deg,rgba(145,20,75,.12),rgba(0,0,0,.76));
-    border: 1px solid #33252d;
-    border-left: 5px solid #771440;
-    box-shadow: 4px 4px 0 rgba(0,0,0,.3);
-    transition: border-color .25s ease,background .25s ease;
+.content-card {
+    padding: 26px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: linear-gradient(145deg, var(--background-light), rgba(18, 11, 17, 0.45));
 }
 
-.FAQ details[open] {
-    border-left-color: var(--pink);
-    background: linear-gradient(90deg,rgba(145,20,75,.2),rgba(0,0,0,.82));
-}
-
-.FAQ summary {
-    position: relative;
-    cursor: pointer;
-    list-style: none;
-    padding: 19px 55px 19px 20px;
-    font-family: "Oswald",sans-serif;
-    font-size: 19px;
-    font-weight: 600;
-    letter-spacing: .4px;
-    text-align: left;
-}
-
-.FAQ summary::-webkit-details-marker {
-    display: none;
-}
-
-.FAQ summary::after {
-    content: "+";
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-family: "Anton",sans-serif;
-    font-size: 28px;
-    color: var(--pink);
-    transition: transform .25s ease;
-}
-
-.FAQ details[open] summary::after {
-    content: "−";
-    transform: translateY(-50%) rotate(180deg);
-}
-
-.FAQ details p {
-    padding: 0 20px 20px;
+.content-card p {
     color: var(--muted);
-    font-size: 16px;
-    line-height: 1.7;
-    text-align: left;
-    max-width: 850px;
+    margin-bottom: 0;
 }
 
-.FAQ a {
-    color: #f17cac;
-    text-underline-offset: 3px;
+.fact-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 25px;
 }
 
-.Socials {
+.fact {
+    padding: 18px;
+    border-left: 3px solid var(--pink);
+    background: var(--background-light);
+}
+
+.fact strong {
+    display: block;
+    color: var(--pink-bright);
+    font-size: 18px;
+}
+
+.fact span {
+    color: var(--muted);
+}
+
+.timeline {
+    border-left: 2px solid var(--pink);
+    margin: 30px 0 0 8px;
+    padding-left: 25px;
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 28px;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: -31px;
+    top: 8px;
+    border-radius: 50%;
+    background: var(--pink-bright);
+}
+
+.timeline-item p {
+    color: var(--muted);
+    margin: 5px 0 0;
+}
+
+.faq-item {
+    padding: 22px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.faq-item h3 {
+    font-size: 22px;
+}
+
+.faq-item p {
+    color: var(--muted);
+    margin-bottom: 0;
+}
+
+.social-links {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 12px;
-    width: 100%;
-    margin-top: 5px;
+    margin-top: 24px;
 }
 
-.SocialButton {
-    min-width: 150px;
-    padding: 13px 20px;
-    background: #111;
-    border: 2px solid #4a3a42;
-    box-shadow: 4px 4px 0 #241a20;
-    text-decoration: none;
-    font-weight: 700;
-    transition: transform .3s ease,background .3s ease,border-color .3s ease;
+.social-links a {
+    display: inline-block;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 18px;
+    color: var(--text);
+    transition: background 0.2s ease, border-color 0.2s ease;
 }
 
-.SocialButton:hover {
-    background: var(--pink-dark);
+.social-links a:hover {
+    background: var(--pink);
     border-color: var(--pink);
-    transform: translateY(-4px);
-}
-
-.Quote {
-    width: min(850px,95%);
-    padding: 34px 20px;
-    border-top: 1px solid #33232b;
-    border-bottom: 1px solid #33232b;
-    position: relative;
-}
-
-.Quote p {
-    font-family: "Anton",sans-serif;
-    font-size: clamp(25px,5vw,42px);
-    letter-spacing: 2px;
-    color: #dedede;
-    text-align: center;
 }
 
 footer {
-    width: 100vw;
-    margin-top: 4px;
-    padding: 28px 18px;
-    background: #080808;
-    border-top: 2px solid #38232e;
-    color: #888;
-    font-size: 14px;
-    letter-spacing: 1px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 9px;
+    margin-top: 50px;
+    padding: 35px 6%;
+    border-top: 1px solid var(--border);
     text-align: center;
+    color: var(--muted);
 }
 
-.FooterLine {
-    color: #888;
-    text-align: center;
+footer p {
+    margin: 6px 0;
 }
 
-.FooterLine strong {
-    color: var(--pink);
-    font-weight: 600;
+footer .footer-logo {
+    color: white;
+    font-family: 'Anton', sans-serif;
+    font-size: 26px;
+    letter-spacing: 2px;
 }
 
-.FooterLinks {
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 4px;
-}
-
-.FooterLinks a {
-    color: var(--pink);
-    font-weight: 700;
-    text-decoration: none;
-}
-
-.FooterLinks a:hover {
-    color: var(--pink-light);
-    text-decoration: underline;
-}
-
-:focus-visible {
-    outline: 2px solid var(--pink-light);
-    outline-offset: 4px;
-}
-
-@keyframes IntroEnter {
-    from {
-        opacity: 0;
-        transform: translateY(30px) scale(.98);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
-@keyframes FadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes Shine {
-    0%,20% {
-        transform: translateX(-120%);
-    }
-    55%,100% {
-        transform: translateX(120%);
-    }
-}
-
-@keyframes BackgroundPulse {
-    from {
-        opacity: .8;
-        transform: scale(1);
-    }
-    to {
-        opacity: .93;
-        transform: scale(1.06);
-    }
-}
-
-@media (max-width:760px) {
-    .Hero {
-        grid-template-columns: 1fr;
-        text-align: center;
-        padding: 34px 22px;
-        gap: 30px;
-    }
-
-    .HeroCopy {
-        text-align: center;
-    }
-
-    .HeroIntro {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .HeroActions {
-        justify-content: center;
-    }
-
-    .HeroImageWrap {
-        width: min(65%,280px);
-        grid-row: 1;
-    }
-
-    .BioGrid {
-        grid-template-columns: 1fr;
-    }
-
-    .Facts {
-        grid-template-columns: 1fr;
-    }
-
-    .Fact {
-        padding: 17px;
-    }
-
-    .Nav {
-        align-items: flex-start;
+@media (max-width: 700px) {
+    header {
         flex-direction: column;
+        text-align: center;
     }
 
-    .NavLinks {
-        justify-content: flex-start;
+    nav {
+        justify-content: center;
+        gap: 12px 18px;
     }
 
-    .NavLinks a {
-        padding: 8px 10px;
+    .hero {
+        padding: 70px 0 45px;
     }
 
-    .TimelineItem {
+    .content-grid,
+    .fact-list {
         grid-template-columns: 1fr;
-        gap: 5px;
-        padding: 19px;
     }
 
-    .TimelineYear {
-        font-size: 21px;
-    }
-}
-
-@media (max-width:480px) {
-    .Page {
-        padding: 12px 10px 0;
-        gap: 27px;
-    }
-
-    .Nav {
-        padding: 12px;
-    }
-
-    .NavLinks {
-        gap: 4px;
-    }
-
-    .NavLinks a {
-        font-size: 12px;
-    }
-
-    .Hero h1 {
-        font-size: clamp(58px,18vw,85px);
-    }
-
-    .HeroIntro,
-    .Lead {
-        font-size: 16px;
-    }
-
-    .HeroImageWrap {
-        width: min(72%,250px);
-    }
-
-    .BioCard {
-        padding: 21px;
-    }
-
-    .FAQ summary {
-        font-size: 17px;
-        padding: 17px 48px 17px 15px;
-    }
-
-    .FAQ details p {
-        padding: 0 15px 17px;
-    }
-
-    .SocialButton {
-        width: 100%;
-    }
-}
-
-@media (prefers-reduced-motion:reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: .01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: .01ms !important;
-        scroll-behavior: auto !important;
+    section {
+        padding: 38px 0;
     }
 }
 </style>
 </head>
 
 <body>
-<main class="Page">
+<header>
+    <a class="logo" href="/" aria-label="JK3R official homepage">JK3R</a>
 
-<nav class="Nav" aria-label="Main navigation">
-    <a class="NavBrand" href="index.html">JK<span>3</span>R</a>
-
-    <div class="NavLinks">
-        <a href="index.html">Home</a>
-        <a href="#biography" aria-current="page">About</a>
-        <a href="#timeline">Career</a>
-        <a href="#faq">FAQ</a>
-        <a href="merch.html">Merch</a>
-    </div>
-</nav>
-
-<header class="Hero">
-    <div class="HeroCopy">
-        <p class="Eyebrow">The artist behind the name</p>
-
-        <h1>ABOUT <span>JK3R / JAI WILSON</span></h1>
-
-        <p class="HeroIntro">
-            Get to know the person behind JK3R — a UK musician, singer,
-            songwriter and content creator building his own identity through music.
-        </p>
-
-        <div class="HeroActions">
-            <a class="Button" href="#biography">
-                Read my story <span aria-hidden="true">↓</span>
-            </a>
-
-            <a class="Button Secondary"
-               href="https://open.spotify.com/artist/1ecMML3OAT0IoBW6kQtK1o"
-               target="_blank"
-               rel="noopener noreferrer">
-                Listen on Spotify ↗
-            </a>
-        </div>
-    </div>
-
-    <div class="HeroImageWrap">
-        <img class="HeroImage"
-             src="Images/JK3RImage1.jpg"
-             alt="JK3R, also known as Jai Wilson"
-             fetchpriority="high">
-    </div>
+    <nav aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/about.html" class="active">About</a>
+        <a href="/#music">Music</a>
+        <a href="/#contact">Contact</a>
+    </nav>
 </header>
 
-<section class="Section" id="biography">
-    <h2 class="SectionTitle">WHO IS <span>JK3R?</span></h2>
-    <div class="SectionLine"></div>
+<main>
+    <section class="hero">
+        <div class="eyebrow">Official Artist Biography</div>
+        <h1>WHO IS <span>JK3R?</span></h1>
+        <p>
+            Get to know JK3R, also known as Jai Wilson — a UK musician,
+            singer, songwriter and content creator developing his own sound
+            and identity.
+        </p>
+    </section>
 
-    <p class="Lead">
-        JK3R is the artist name of Jai Wilson, a musician from the UK whose
-        work brings together rock, emo, goth and rap influences. Music is a
-        way to explore ideas, communicate feelings and develop a sound that
-        feels personal rather than fitting into one category.
-    </p>
+    <section id="biography">
+        <div class="eyebrow">The Story</div>
+        <h2>About JK3R</h2>
+        <p class="section-intro">
+            JK3R is the artist name of Jai Wilson, a UK-based musician and
+            content creator. Through his music and online presence, he is
+            building a recognisable identity and sharing his work with a
+            growing audience.
+        </p>
+        <p class="section-intro">
+            His artist project is centred on self-expression, experimentation
+            and developing a sound that reflects his own interests and
+            experiences. This website is the official online home for JK3R,
+            bringing together information about his work and links to his
+            official platforms.
+        </p>
+    </section>
 
-    <p class="Lead">
-        Alongside writing and releasing music, Jai creates online content and
-        continues to build his presence as an independent creative. This page
-        is a central place to learn more about the artist, find his official
-        platforms and get answers to common questions.
-    </p>
+    <section id="music">
+        <div class="eyebrow">Creative Work</div>
+        <h2>Music & Creativity</h2>
+        <p class="section-intro">
+            Music is at the centre of JK3R's artist identity. His releases and
+            creative direction continue to develop as he explores different
+            sounds, ideas and ways to connect with listeners.
+        </p>
 
-    <div class="BioGrid">
-        <article class="BioCard">
-            <p class="CardNumber">01 / MUSIC</p>
-            <h3>Sound & songwriting</h3>
-            <p>
-                JK3R's music draws on rock, emo, goth and rap influences.
-                His releases and collaborations are part of an evolving
-                creative identity, with each project contributing to the wider sound.
-            </p>
-        </article>
-
-        <article class="BioCard">
-            <p class="CardNumber">02 / CREATIVE WORK</p>
-            <h3>Beyond the songs</h3>
-            <p>
-                Jai also makes online content and develops his presence across
-                digital platforms. The aim is to build a recognisable artist
-                identity that connects the music, visuals and online work.
-            </p>
-        </article>
-
-        <article class="BioCard">
-            <p class="CardNumber">03 / COLLABORATIONS</p>
-            <h3>Working with others</h3>
-            <p>
-                Collaborations form part of JK3R's catalogue, including tracks
-                released with Rebzyyx. Check the official music platforms for
-                the current catalogue and credits.
-            </p>
-        </article>
-
-        <article class="BioCard">
-            <p class="CardNumber">04 / OFFICIAL SOURCE</p>
-            <h3>Stay connected</h3>
-            <p>
-                This website is the central hub for JK3R's music, social
-                platforms and official updates. Use the links on this page
-                to find the artist's public profiles directly.
-            </p>
-        </article>
-    </div>
-</section>
-
-<section class="Section">
-    <h2 class="SectionTitle">AT A <span>GLANCE</span></h2>
-    <div class="SectionLine"></div>
-
-    <div class="Facts">
-        <div class="Fact">
-            <strong>JK3R</strong>
-            <span>Artist name</span>
-        </div>
-
-        <div class="Fact">
-            <strong>Jai Wilson</strong>
-            <span>Also known as</span>
-        </div>
-
-        <div class="Fact">
-            <strong>United Kingdom</strong>
-            <span>Based in</span>
-        </div>
-    </div>
-</section>
-
-<section class="Section" id="timeline">
-    <h2 class="SectionTitle">MUSIC & <span>MILESTONES</span></h2>
-    <div class="SectionLine"></div>
-
-    <div class="Timeline">
-        <article class="TimelineItem">
-            <p class="TimelineYear">RELEASES</p>
-            <div>
-                <h3>Building a catalogue</h3>
+        <div class="content-grid">
+            <article class="content-card">
+                <h3>Music</h3>
                 <p>
-                    JK3R continues to develop a catalogue of releases, combining
-                    solo work with collaborations. The official Spotify profile
-                    is the best place to check the current discography.
+                    JK3R creates and releases music under his own artist name.
+                    Visit his official Spotify profile to find his available
+                    releases and listen to his work.
+                </p>
+                <p><a href="https://open.spotify.com/artist/1ecMML3OAT0IoBW6kQtK1o" target="_blank" rel="noopener noreferrer">Listen on Spotify →</a></p>
+            </article>
+
+            <article class="content-card">
+                <h3>Online Content</h3>
+                <p>
+                    Alongside his music, JK3R shares content and updates
+                    through his official social platforms, allowing listeners
+                    to follow his work as it develops.
+                </p>
+                <p><a href="https://www.youtube.com/@jk3r_" target="_blank" rel="noopener noreferrer">Visit YouTube →</a></p>
+            </article>
+        </div>
+    </section>
+
+    <section id="facts">
+        <div class="eyebrow">At A Glance</div>
+        <h2>Quick Facts</h2>
+
+        <div class="fact-list">
+            <div class="fact">
+                <strong>Artist Name</strong>
+                <span>JK3R</span>
+            </div>
+            <div class="fact">
+                <strong>Also Known As</strong>
+                <span>Jai Wilson</span>
+            </div>
+            <div class="fact">
+                <strong>Based In</strong>
+                <span>United Kingdom</span>
+            </div>
+            <div class="fact">
+                <strong>Creative Work</strong>
+                <span>Music, songwriting and online content</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="journey">
+        <div class="eyebrow">The Journey</div>
+        <h2>Building The Artist Project</h2>
+        <p class="section-intro">
+            JK3R's work is an ongoing creative process. The focus is on
+            developing his sound, releasing music and building a consistent
+            online presence.
+        </p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Developing A Sound</h3>
+                <p>
+                    Exploring musical ideas and working towards a distinctive
+                    direction as an independent artist.
                 </p>
             </div>
-        </article>
 
-        <article class="TimelineItem">
-            <p class="TimelineYear">COLLABS</p>
-            <div>
-                <h3>Working with Rebzyyx</h3>
+            <div class="timeline-item">
+                <h3>Releasing Music</h3>
                 <p>
-                    JK3R's catalogue includes collaborative tracks such as
-                    “ZOMBIE STYLE MAKEOUT SESSION” and “ILoveZ&lt;3”.
+                    Making music available to listeners through official
+                    streaming platforms.
                 </p>
             </div>
-        </article>
 
-        <article class="TimelineItem">
-            <p class="TimelineYear">2026</p>
-            <div>
-                <h3>Continuing the journey</h3>
+            <div class="timeline-item">
+                <h3>Growing Online</h3>
                 <p>
-                    New music, creative projects and online content are part
-                    of JK3R's ongoing development as an artist. Follow his
-                    official channels for confirmed announcements.
+                    Connecting music, social content and official artist
+                    information in one place.
                 </p>
             </div>
-        </article>
-    </div>
+        </div>
+    </section>
 
-    <p class="Note">
-        This timeline highlights broad milestones rather than an exhaustive
-        release history. Release dates and catalogue details can change;
-        streaming platforms carry the latest listings.
-    </p>
-</section>
+    <section id="faq">
+        <div class="eyebrow">Frequently Asked Questions</div>
+        <h2>Questions About JK3R</h2>
 
-<section class="Section" id="faq">
-    <h2 class="SectionTitle">FREQUENTLY ASKED <span>QUESTIONS</span></h2>
-    <div class="SectionLine"></div>
+        <div class="faq-item">
+            <h3>What is JK3R's real name?</h3>
+            <p>JK3R is also known as Jai Wilson.</p>
+        </div>
 
-    <p class="Lead">
-        Quick answers to common questions about JK3R, his music and where to
-        find official updates.
-    </p>
-
-    <div class="FAQ">
-        <details>
-            <summary>Who is JK3R?</summary>
+        <div class="faq-item">
+            <h3>What does JK3R do?</h3>
             <p>
-                JK3R is the artist name of Jai Wilson, a UK musician,
-                singer, songwriter and content creator.
+                JK3R is a musician, singer, songwriter and content creator
+                from the United Kingdom.
             </p>
-        </details>
+        </div>
 
-        <details>
-            <summary>What kind of music does JK3R make?</summary>
+        <div class="faq-item">
+            <h3>Where can I listen to JK3R's music?</h3>
             <p>
-                His music draws on rock, emo, goth and rap influences.
-                The sound can vary between releases and collaborations.
+                Visit his official
+                <a href="https://open.spotify.com/artist/1ecMML3OAT0IoBW6kQtK1o" target="_blank" rel="noopener noreferrer">Spotify artist profile</a>
+                to find his music.
             </p>
-        </details>
+        </div>
 
-        <details>
-            <summary>Where can I listen to JK3R?</summary>
+        <div class="faq-item">
+            <h3>Where can I follow JK3R?</h3>
             <p>
-                You can find his artist profile on
-                <a href="https://open.spotify.com/artist/1ecMML3OAT0IoBW6kQtK1o"
-                   target="_blank"
-                   rel="noopener noreferrer">Spotify</a>.
-                The profile contains the available releases and collaborations.
+                You can follow JK3R through the official social links listed
+                below.
             </p>
-        </details>
+        </div>
+    </section>
 
-        <details>
-            <summary>Where is JK3R from?</summary>
-            <p>JK3R is a musician from the United Kingdom.</p>
-        </details>
+    <section id="contact">
+        <div class="eyebrow">Official Platforms</div>
+        <h2>Follow JK3R</h2>
+        <p class="section-intro">
+            Use these links to find JK3R's music and official online profiles.
+        </p>
 
-        <details>
-            <summary>Has JK3R collaborated with other artists?</summary>
-            <p>
-                Yes. His catalogue includes collaborations with Rebzyyx,
-                including “ZOMBIE STYLE MAKEOUT SESSION” and “ILoveZ&lt;3”.
-            </p>
-        </details>
-
-        <details>
-            <summary>Where can I find JK3R's official social media?</summary>
-            <p>
-                Use the links below to visit the YouTube, Instagram and
-                Spotify profiles associated with JK3R.
-            </p>
-        </details>
-
-        <details>
-            <summary>Where can I buy official JK3R merchandise?</summary>
-            <p>
-                Visit the <a href="merch.html">official merch store</a>
-                from this website to view available merchandise.
-            </p>
-        </details>
-
-        <details>
-            <summary>How can I contact JK3R for business enquiries?</summary>
-            <p>
-                For business enquiries, use the contact details published
-                on JK3R's official platforms or website. Check those sources
-                for the current preferred contact method.
-            </p>
-        </details>
-
-        <details>
-            <summary>Where will new music and announcements be posted?</summary>
-            <p>
-                Follow JK3R on his official social channels and check his
-                streaming profiles for new releases and confirmed announcements.
-            </p>
-        </details>
-    </div>
-</section>
-
-<section class="Section">
-    <h2 class="SectionTitle">FIND <span>JK3R</span></h2>
-    <div class="SectionLine"></div>
-
-    <p class="Lead">
-        Follow the official profiles for music, videos and updates.
-    </p>
-
-    <div class="Socials">
-        <a class="SocialButton"
-           href="https://www.youtube.com/@jk3r_"
-           target="_blank"
-           rel="noopener noreferrer">YouTube ↗</a>
-
-        <a class="SocialButton"
-           href="https://www.instagram.com/jk3r_was_here/"
-           target="_blank"
-           rel="noopener noreferrer">Instagram ↗</a>
-
-        <a class="SocialButton"
-           href="https://open.spotify.com/artist/1ecMML3OAT0IoBW6kQtK1o"
-           target="_blank"
-           rel="noopener noreferrer">Spotify ↗</a>
-
-        <a class="SocialButton" href="merch.html">Official Merch ↗</a>
-    </div>
-</section>
-
-<section class="Quote">
-    <p>MAKE NOISE. MAKE MUSIC.</p>
-</section>
-
-<footer>
-    <div class="FooterLine">
-        © 2026 GothRift Recordz
-        <strong>(gothriftrecordz@gmail.com)</strong>
-    </div>
-
-    <div class="FooterLine">
-        Website Designed By Fizogon
-        <strong>(fizogonbusiness@gmail.com)</strong>
-    </div>
-
-    <div class="FooterLinks">
-        <a href="index.html">Home</a>
-        <a href="merch.html">Merch</a>
-        <a href="terms.html">Terms Of Service</a>
-    </div>
-</footer>
-
+        <div class="social-links">
+            <a href="https://open.spotify.com/artist/1ecMML3OAT0IoBW6kQtK1o" target="_blank" rel="noopener noreferrer">Spotify</a>
+            <a href="https://www.youtube.com/@jk3r_" target="_blank" rel="noopener noreferrer">YouTube</a>
+            <a href="https://www.instagram.com/jk3r_was_here/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="/" >Official Website</a>
+        </div>
+    </section>
 </main>
 
-<script>
-document.querySelectorAll('.FAQ details').forEach((item) => {
-    item.addEventListener('toggle', () => {
-        if (item.open) {
-            document.querySelectorAll('.FAQ details').forEach((other) => {
-                if (other !== item) {
-                    other.open = false;
-                }
-            });
-        }
-    });
-});
-</script>
+<footer>
+    <div class="footer-logo">JK3R</div>
+    <p>Official website of JK3R (Jai Wilson).</p>
+    <p>Website designed by Fizogon.</p>
+    <p>© <span id="year"></span> JK3R. All rights reserved.</p>
+</footer>
 
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>

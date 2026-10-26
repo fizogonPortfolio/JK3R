@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-adsense-account" content="ca-pub-7272462336635844">
 
 <title>JK3R (Jai Wilson) — Official Website</title>
-<link rel="icon" type="image/png" href="Images/JK3RImage3.jpg">
+<link rel="icon" type="image/jpeg" href="Images/JK3RImage3.jpg">
 <meta name="description" content="JK3R (Jai Wilson) official website. Discover JK3R's music, songs, social media, merch, photos and latest releases.">
 <meta name="author" content="JK3R">
 <meta name="robots" content="index, follow">
@@ -24,30 +24,33 @@
 <meta name="twitter:description" content="The official website of JK3R (Jai Wilson). Discover music, songs, socials, merch and more.">
 <meta name="twitter:image" content="https://jk3r.com/Images/JK3RImage1.jpg">
 
+<!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7272462336635844"
      crossorigin="anonymous"></script>
+
+<!-- Structured data -->
 <script type="application/ld+json">
 {
-    "@context": "https://schema.org",
-    "@type": "ProfilePage",
-    "@id": "https://jk3r.com/#profile",
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": "https://jk3r.com/#profile",
+  "url": "https://jk3r.com/",
+  "name": "JK3R (Jai Wilson) — Official Website",
+  "description": "The official website of JK3R, also known as Jai Wilson.",
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "https://jk3r.com/#jk3r",
+    "name": "Jai Wilson",
+    "alternateName": "JK3R",
     "url": "https://jk3r.com/",
-    "name": "JK3R (Jai Wilson) — Official Website",
-    "description": "The official website of JK3R, also known as Jai Wilson.",
-    "mainEntity": {
-        "@type": "Person",
-        "@id": "https://jk3r.com/#jk3r",
-        "name": "Jai Wilson",
-        "alternateName": "JK3R",
-        "url": "https://jk3r.com/",
-        "image": "https://jk3r.com/Images/JK3RImage1.jpg",
-        "jobTitle": "Musician, Singer and Songwriter",
-        "sameAs": [
-            "https://www.youtube.com/@jk3r_",
-            "https://www.instagram.com/jk3r_was_here/",
-            "https://open.spotify.com/artist/1ecMML3OAT0IoBW6kQtK1o"
-        ]
-    }
+    "image": "https://jk3r.com/Images/JK3RImage1.jpg",
+    "jobTitle": "Musician, Singer and Songwriter",
+    "sameAs": [
+      "https://www.youtube.com/@jk3r_",
+      "https://www.instagram.com/jk3r_was_here/",
+      "https://open.spotify.com/artist/1ecMML3OAT0IoBW6kQtK1o"
+    ]
+  }
 }
 </script>
 
@@ -645,7 +648,7 @@ a, button {
     justify-content: center;
     align-items: center;
     gap: 15px;
-    flex-wrap: column;
+    flex-wrap: wrap;
 }
 
 .Selfies {
@@ -865,7 +868,7 @@ a, button {
 footer {
     position: relative;
     z-index: 99999;
-    width: 100vw;
+    width: 100%;
     margin-top: 10px;
     padding: 30px 20px;
     background: #080808;
@@ -985,51 +988,6 @@ footer:hover {
     transform: translateY(1px);
 }
 
-@keyframes HeaderEnter {
-    from { opacity: 0; transform: translateY(-45px) rotate(-3deg); }
-    to { opacity: 1; transform: translateY(0) rotate(-.4deg); }
-}
-
-@keyframes IntroEnter {
-    from { opacity: 0; transform: translateY(35px) scale(.97); }
-    to { opacity: 1; transform: translateY(0) scale(1); }
-}
-
-@keyframes MerchEnter {
-    from { opacity: 0; transform: translateY(30px) scale(.92); }
-    to { opacity: 1; transform: translateY(0) scale(1); }
-}
-
-@keyframes FadeUp {
-    from { opacity: 0; transform: translateY(25px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes ImageEnter {
-    from { opacity: 0; transform: translateY(35px) scale(.88) rotate(4deg); }
-    to { opacity: 1; transform: translateY(0) scale(1) rotate(0); }
-}
-
-@keyframes QuoteEnter {
-    from { opacity: 0; transform: translateX(-35px) rotate(-2deg); }
-    to { opacity: 1; transform: translateX(0) rotate(0); }
-}
-
-@keyframes IntroShine {
-    0% { left: -240px; }
-    25%,100% { left: 115%; }
-}
-
-@keyframes BackgroundPulse {
-    from { opacity: .85; transform: scale(1); }
-    to { opacity: .95; transform: scale(1.08); }
-}
-
-@keyframes CookieEnter {
-    from { opacity: 0; transform: translateY(30px) scale(.95); }
-    to { opacity: 1; transform: translateY(0) scale(1); }
-}
-
 /* Navigation, album library and photo gallery */
 
 .MainNav {
@@ -1101,8 +1059,6 @@ footer:hover {
     background: #a91d59;
     transform: translateY(-3px);
 }
-
-/* Album covers stay compact instead of stretching across the card. */
 
 .AlbumLibrary {
     width: 100%;
@@ -1189,6 +1145,51 @@ footer:hover {
     transform: translateY(-5px) scale(1.025);
     border-color: #d43a7d;
     box-shadow: 6px 6px 0 #8f1745;
+}
+
+@keyframes HeaderEnter {
+    from { opacity: 0; transform: translateY(-45px) rotate(-3deg); }
+    to { opacity: 1; transform: translateY(0) rotate(-.4deg); }
+}
+
+@keyframes IntroEnter {
+    from { opacity: 0; transform: translateY(35px) scale(.97); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes MerchEnter {
+    from { opacity: 0; transform: translateY(30px) scale(.92); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes FadeUp {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ImageEnter {
+    from { opacity: 0; transform: translateY(35px) scale(.88) rotate(4deg); }
+    to { opacity: 1; transform: translateY(0) scale(1) rotate(0); }
+}
+
+@keyframes QuoteEnter {
+    from { opacity: 0; transform: translateX(-35px) rotate(-2deg); }
+    to { opacity: 1; transform: translateX(0) rotate(0); }
+}
+
+@keyframes IntroShine {
+    0% { left: -240px; }
+    25%,100% { left: 115%; }
+}
+
+@keyframes BackgroundPulse {
+    from { opacity: .85; transform: scale(1); }
+    to { opacity: .95; transform: scale(1.08); }
+}
+
+@keyframes CookieEnter {
+    from { opacity: 0; transform: translateY(30px) scale(.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 @media (max-width: 700px) {
@@ -1430,7 +1431,7 @@ footer:hover {
     <p>Welcome to the official home of JK3R.</p>
 </section>
 
-<section class="Section" style="display: all;">
+<section class="Section">
     <h2 class="SectionTitle">New Merch <span>Out Now</span></h2>
     <div class="SectionLine"></div>
 </section>
@@ -1441,7 +1442,7 @@ footer:hover {
             <span class="MerchSmall">OFFICIAL JK3R STORE</span>
             <span class="MerchMain">SHOP MERCH</span>
         </span>
-        <span class="MerchArrow">→</span>
+        <span class="MerchArrow" aria-hidden="true">→</span>
     </a>
 </section>
 
@@ -1484,9 +1485,7 @@ footer:hover {
                 <h3 class="MusicName">ZOMBIE STYLE MAKEOUT SESSION</h3>
                 <p class="MusicArtist">JK3R &amp; Rebzyyx</p>
             </div>
-            <a class="ListenButton"
-               href="https://open.spotify.com/track/5uUPZzUDDN5rLXsbNwHXFv"
-               target="_blank" rel="noopener noreferrer">LISTEN</a>
+            <a class="ListenButton" href="https://open.spotify.com/track/5uUPZzUDDN5rLXsbNwHXFv" target="_blank" rel="noopener noreferrer">LISTEN</a>
         </div>
 
         <div class="MusicItem">
@@ -1495,9 +1494,7 @@ footer:hover {
                 <h3 class="MusicName">ILoveZ&lt;3</h3>
                 <p class="MusicArtist">JK3R &amp; Rebzyyx</p>
             </div>
-            <a class="ListenButton"
-               href="https://open.spotify.com/album/7D4g6DgcrUu1BKRMyCU6tb"
-               target="_blank" rel="noopener noreferrer">LISTEN</a>
+            <a class="ListenButton" href="https://open.spotify.com/album/7D4g6DgcrUu1BKRMyCU6tb" target="_blank" rel="noopener noreferrer">LISTEN</a>
         </div>
 
         <div class="MusicItem">
@@ -1506,9 +1503,7 @@ footer:hover {
                 <h3 class="MusicName">All I Want Is You</h3>
                 <p class="MusicArtist">JK3R &amp; Rebzyyx</p>
             </div>
-            <a class="ListenButton"
-               href="https://open.spotify.com/artist/1ecMML3OAT0IoBW6kQtK1o"
-               target="_blank" rel="noopener noreferrer">LISTEN</a>
+            <a class="ListenButton" href="https://open.spotify.com/artist/1ecMML3OAT0IoBW6kQtK1o" target="_blank" rel="noopener noreferrer">LISTEN</a>
         </div>
     </div>
 </section>
@@ -1566,23 +1561,26 @@ footer:hover {
     <img id="FullscreenImage" src="" alt="Fullscreen JK3R image" onclick="event.stopPropagation()">
 </div>
 
-<div class="CookiePopup" id="CookiePopup">
+<div class="CookiePopup" id="CookiePopup" role="dialog" aria-label="Cookie preferences">
     <h3>Cookies</h3>
 
     <p>
-        This website uses a cookie to remember your cookie preference.
-        No tracking or advertising cookies are used. Ignoring Cookies Will
-        Result In Cookie Popup Showing Again.
-        <a href="terms.html">Terms Of Service</a>
+        This website uses cookies to remember your preferences and may use
+        advertising cookies or similar technologies through third-party
+        services such as Google AdSense. Choose whether to accept optional
+        cookies. You can read more in our
+        <a href="terms.html">Terms Of Service</a>.
     </p>
 
     <div class="CookieButtons">
-        <button class="CookieButton" onclick="AcceptCookies(true)">Accept Cookies</button>
-        <button class="CookieButton" onclick="AcceptCookies(false)">Ignore Cookies</button>
+        <button class="CookieButton" type="button" onclick="AcceptCookies(true)">Accept Cookies</button>
+        <button class="CookieButton" type="button" onclick="AcceptCookies(false)">Reject Optional Cookies</button>
     </div>
 </div>
 
 <script>
+"use strict";
+
 /* Add new albums here. Upload each cover to Images first. */
 const ALBUMS = [
     {
@@ -1622,6 +1620,11 @@ const JAI_PHOTOS = [
 ];
 
 const AlbumLibrary = document.getElementById("AlbumLibrary");
+const JaiGallery = document.getElementById("JaiGallery");
+const ImageFullscreen = document.getElementById("ImageFullscreen");
+const FullscreenImage = document.getElementById("FullscreenImage");
+const CookiePopup = document.getElementById("CookiePopup");
+const CookieName = "jk3r_cookie_consent";
 
 if (AlbumLibrary) {
     AlbumLibrary.innerHTML = ALBUMS.map((album) => `
@@ -1636,53 +1639,62 @@ if (AlbumLibrary) {
     `).join("");
 }
 
-const JaiGallery = document.getElementById("JaiGallery");
-
 if (JaiGallery) {
     JaiGallery.innerHTML = JAI_PHOTOS.map((photo) => `
         <img class="GalleryItem" src="${photo.src}" alt="${photo.alt}" loading="lazy" onclick="OpenImage(this)">
     `).join("");
 }
 
-const ImageFullscreen = document.getElementById("ImageFullscreen");
-const FullscreenImage = document.getElementById("FullscreenImage");
-const CookiePopup = document.getElementById("CookiePopup");
-const CookieName = "jk3r_cookie_consent";
-
 function OpenImage(image) {
+    if (!image || !ImageFullscreen || !FullscreenImage) return;
+
     FullscreenImage.src = image.src;
+    FullscreenImage.alt = image.alt || "Fullscreen JK3R image";
     ImageFullscreen.style.display = "flex";
     document.body.style.overflow = "hidden";
 }
 
 function CloseImage() {
+    if (!ImageFullscreen || !FullscreenImage) return;
+
     ImageFullscreen.style.display = "none";
     FullscreenImage.src = "";
     document.body.style.overflow = "";
 }
 
 document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-        CloseImage();
-    }
+    if (event.key === "Escape") CloseImage();
 });
 
+/*
+This basic popup remembers a preference. It does not itself block AdSense
+or provide a certified consent-management platform. Configure a Google-
+certified CMP in AdSense Privacy & messaging if one is required for your site.
+*/
 function AcceptCookies(accepted) {
-    if (accepted) {
+    try {
+        const consentValue = accepted ? "accepted" : "rejected";
+
         document.cookie =
-            CookieName +
-            "=accepted; Max-Age=31536000; Path=/; SameSite=Lax; Secure";
+            CookieName + "=" + consentValue +
+            "; Max-Age=31536000; Path=/; SameSite=Lax; Secure";
+    } catch (error) {
+        console.error("Could not save cookie preference:", error);
     }
 
-    CookiePopup.style.display = "none";
+    if (CookiePopup) CookiePopup.style.display = "none";
 }
 
-if (
-    document.cookie
+try {
+    const savedConsent = document.cookie
         .split("; ")
-        .some(cookie => cookie.startsWith(CookieName + "=accepted"))
-) {
-    CookiePopup.style.display = "none";
+        .find(cookie => cookie.startsWith(CookieName + "="));
+
+    if (savedConsent && CookiePopup) {
+        CookiePopup.style.display = "none";
+    }
+} catch (error) {
+    console.error("Could not read cookie preference:", error);
 }
 </script>
 
